@@ -1,0 +1,15 @@
+﻿Carbohydrates                                                                                APCS 1 pd01
+Jesse Sit, Xing Tao Shi, Joshel Xiedeng                                                2017-01-10
+To-Do List:
+1. Finish flowchart.
+2. Revise the project proposal.
+3. Once green light, begin by creating all the necessary classes.
+4. Chain the Card classes together through inheritance links.
+5. Create the class player.
+6. Work on the class Card.
+7. Work on the subclasses of Card
+8. Make sure a deck is creatable
+9. Add onto the player class, such as the instance variables of hand and property.
+10. Make a setUpGame() method in woo.java that, using user input, sets up a new game.
+11. Make play(), bank() methods in Player.java, using valid user input, takes card from user’s hand arrayList and performs an action with it
+12.
