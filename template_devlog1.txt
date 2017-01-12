@@ -58,10 +58,66 @@ tales of wisdom gained...
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 
-
 yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
+
+2017-12-22
+--------------------------------------------------------------
+Jesse :: suggested board game "Go"
+Xing Tao :: suggested board game "Mancala"
+Joshel :: suggested "Chinese Poker" card game
+==============================================================
+
+2017-01-03
+--------------------------------------------------------------
+Everyone :: rejected all ideas, too simple
+Jesse :: suggested "Sorry" card game
+Xing Tao :: suggested "Monopoly Deal" card game
+==============================================================
+
+2017-01-04
+--------------------------------------------------------------
+Everyone :: agreed on "Monopoly Deal"
+==============================================================
+
+2017-01-05
+--------------------------------------------------------------
+Jesse :: created repo called "Carbohydrates", invited Joshel and Xing Tao
+==============================================================
+
+2017-01-06
+--------------------------------------------------------------
+Jesse :: created google doc for proposal, invited Joshel and Xing Tao
+Xing Tao :: wrote first part of proposal, explaining rules of "Monopoly Deal"
+Jesse :: wrote second part of proposal, explaining basic implementation of code
+Joshel :: edited and added on to both parts
+==============================================================
+
+2017-01-09
+--------------------------------------------------------------
+Jesse & Joshel :: worked on UML in class
+Jesse :: created final version of UML
+Xing Tao & Joshel :: revise proposal
+Joshel :: pushes revised proposal to git repo
+==============================================================
+
+2017-01-10
+--------------------------------------------------------------
+Everyone :: worked on flow chart in class
+Jesse :: created final version of flow chart, created google doc for todo list
+Everyone :: wrote todo list
+==============================================================
+
+2017-01-11
+--------------------------------------------------------------
+Xing Tao :: created classes for Action, Rent, Wild, Player, Human, Computer, Money; pushed to git repo
+Joshel :: created classes for Cards, Property, and Property's subclasses; pushed to git repo
+Jesse :: revised proposal; pushed to git repo; pushed devlog template to git repo
+Joshel :: filled in devlog; pushed to git repo
+==============================================================
+
+
