@@ -101,7 +101,7 @@ Joshel :: edited and added on to both parts
 --------------------------------------------------------------
 Jesse & Joshel :: worked on UML in class
 Jesse :: created final version of UML
-Xing Tao & Joshel :: revise proposal
+Xing Tao & Joshel :: revised proposal
 Joshel :: pushes revised proposal to git repo
 ==============================================================
 
@@ -118,6 +118,7 @@ Xing Tao :: created classes for Action, Rent, Wild, Player, Human, Computer, Mon
 Joshel :: created classes for Cards, Property, and Property's subclasses; pushed to git repo
 Jesse :: revised proposal; pushed to git repo; pushed devlog template to git repo
 Joshel :: filled in devlog; pushed to git repo
+Xing Tao :: revised proposal; pushed to git repo
 ==============================================================
 
 
