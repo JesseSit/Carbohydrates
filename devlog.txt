@@ -123,11 +123,7 @@ Xing Tao :: revised proposal; pushed to git repo
 
 2017-01-12
 --------------------------------------------------------------
-Xing Tao :: created classes for Action, Rent, Wild, Player, Human, Computer, Money; pushed to git repo
-Joshel :: created classes for Cards, Property, and Property's subclasses; pushed to git repo
-Jesse :: revised proposal; pushed to git repo; pushed devlog template to git repo
-Joshel :: filled in devlog; pushed to git repo
-Xing Tao :: revised proposal; pushed to git repo
+Xing Tao :: worked on early stages of woo.java and worked on drawing mechanic and deck.
 ==============================================================
 
 
