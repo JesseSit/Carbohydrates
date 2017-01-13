@@ -125,6 +125,7 @@ Xing Tao :: revised proposal; pushed to git repo
 --------------------------------------------------------------
 Xing Tao :: worked on early stages of woo.java and worked on drawing mechanic and deck; however, could not run woo.java (got NullPointerException error)
 Joshel :: revised drawing mechanic, fixing the aforementioned error
+Jesse :: added onto woo.java. Allows player0 to play a card three times and then code ends
 ==============================================================
 
 
