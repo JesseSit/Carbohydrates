@@ -5,36 +5,53 @@ import java.util.ArrayList;
 public class woo{
     
     public static void main(String[] args) {
+	int turns = 0;
+	int cardNum = 0;
 	//setup game by shuffling deck
+	
+	//create deck
+	ArrayList <Cards> deck = new ArrayList<Cards>();
+	Cards temp = new DarkBlue("broadwalk", 3, 8, 0, 0, 2);
+	Cards temp1 = new DarkBlue("park place", 3, 8, 0, 0, 2);
+
+	deck.add(temp1);
+	for (int i = 0; i < 100; i++) {
+	    deck.add(temp);
+	}
+	
 	System.out.println("Please select the number of players (2-4)");
 	//create players
 	int amtPlayers = Keyboard.readInt();
 	if (amtPlayers > 4 || amtPlayers < 2) {
 	    System.out.println("Not in player range!");
 	}
-	Player human0 = new Human(); 
-	Player human1 = new Human(); 
-	Player human2 = new Human();
-	Player human3 = new Human();
-	
-	//create deck
-	ArrayList <Cards> deck = new ArrayList<Cards>();
-	Cards temp = new DarkBlue("broadwalk", 3, 8, 0, 0, 2);
-	
-	for (int i = 0; i < 100; i++) {
-	    deck.add(temp);
+	    Player h0 = new Human();
+	    h0.draw(5, deck);
+	    Player h1 = new Human();
+	    h1.draw(5, deck);
+	    Player h2 = new Human();
+	    h2.draw(5, deck);
+	    Player h3 = new Human();
+	    h3.draw(5, deck);
+	    
+	int index;
+	while (cardNum < 3){
+	    if ((turns % amtPlayers) == 0){
+		System.out.println("Pick the index of the card you want to play");
+	    index = Keyboard.readInt();
+		h0.play(index);
+	    }
+	    cardNum += 1;
 	}
+	
+	
 
 	//deal hands
-	human0.drawOne(deck);
-	human1.drawOne(deck);
-	human2.drawOne(deck);
-	human3.drawOne(deck);
-<<<<<<< HEAD
-	System.out.println(human1);
 	
-=======
->>>>>>> 134100d9152168792f83f34450e2093abd630546
+	
+	
+	
+	
     }
 
 }
