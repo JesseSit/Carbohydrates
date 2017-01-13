@@ -26,14 +26,21 @@ public class woo{
 	    System.out.println("Not in player range!");
 	}
 	    Player h0 = new Human();
-	    h0.draw(5, deck);
+	    if (amtPlayers > 0){
+		h0.draw(5, deck);
+	    }
 	    Player h1 = new Human();
-	    h1.draw(5, deck);
+	    if (amtPlayers > 1){
+		h1.draw(5, deck);
+	    }
 	    Player h2 = new Human();
-	    h2.draw(5, deck);
+	    if (amtPlayers > 2){
+		h2.draw(5, deck);
+	    }
 	    Player h3 = new Human();
-	    h3.draw(5, deck);
-	    
+	    if (amtPlayers > 3){
+		h3.draw(5, deck);
+	    }
 	int index;
 	while (cardNum < 3){
 	    if ((turns % amtPlayers) == 0){
