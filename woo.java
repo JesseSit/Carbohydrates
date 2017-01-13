@@ -4,8 +4,6 @@ import java.util.ArrayList;
 //game executer file
 public class woo{
     
-    
-
     public static void main(String[] args) {
 	//setup game by shuffling deck
 	System.out.println("Please select the number of players (2-4)");
@@ -26,14 +24,12 @@ public class woo{
 	for (int i = 0; i < 100; i++) {
 	    deck.add(temp);
 	}
-	System.out.println(deck);
-	//deal hands
 
+	//deal hands
 	human0.drawOne(deck);
 	human1.drawOne(deck);
 	human2.drawOne(deck);
 	human3.drawOne(deck);
-	
     }
 
 }

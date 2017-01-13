@@ -123,7 +123,8 @@ Xing Tao :: revised proposal; pushed to git repo
 
 2017-01-12
 --------------------------------------------------------------
-Xing Tao :: worked on early stages of woo.java and worked on drawing mechanic and deck.
+Xing Tao :: worked on early stages of woo.java and worked on drawing mechanic and deck; however, could not run woo.java (got NullPointerException error)
+Joshel :: revised drawing mechanic, fixing the aforementioned error
 ==============================================================
 
 

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Player {
-    protected ArrayList hand;
+    protected ArrayList<Cards> hand;
 
     public void draw(int amtDraw, ArrayList<Cards> deck) {
 	for (int i = 0; i < amtDraw; i++) {
@@ -10,9 +10,7 @@ public class Player {
     }
 	    
     public void drawOne(ArrayList<Cards> deck) {
-	Cards temp = deck.get(0);
-	deck.remove(0);
-	hand.add(temp);
+	    hand.add(deck.remove(0));
     }
 
 }
