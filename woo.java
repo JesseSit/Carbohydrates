@@ -21,7 +21,7 @@ public class woo{
 	
 	//create deck
 	ArrayList <Cards> deck = new ArrayList<Cards>();
-	Cards temp = new DarkBlue();
+	Cards temp = new DarkBlue("broadwalk", 3, 8, 0, 0, 2);
 	
 	for (int i = 0; i < 100; i++) {
 	    deck.add(temp);
@@ -33,6 +33,7 @@ public class woo{
 	human1.drawOne(deck);
 	human2.drawOne(deck);
 	human3.drawOne(deck);
+	System.out.println(human1);
 	
     }
 
