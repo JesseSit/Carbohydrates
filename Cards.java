@@ -9,4 +9,7 @@ public abstract class Cards {
 	value = Val;
 	ID = id;
     }
+    public int getID(){
+	return ID;
+    }
 }

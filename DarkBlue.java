@@ -3,7 +3,4 @@ public class DarkBlue extends Property {
 	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
 	name = Name;
     }
-    public int getID(){
-	return ID;
-    }
 }

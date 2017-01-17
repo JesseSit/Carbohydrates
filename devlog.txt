@@ -128,5 +128,10 @@ Joshel :: revised drawing mechanic, fixing the aforementioned error
 Jesse :: added onto woo.java. Allows player0 to play a card three times and then code ends
 ==============================================================
 
+2017-01-16
+--------------------------------------------------------------
+Xing Tao :: worked on fixing an error where playing a card wasn't working, created an acessor method
+Jesse :: added hand visibility to game execution
+==============================================================
 
 

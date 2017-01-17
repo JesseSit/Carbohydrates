@@ -2,7 +2,7 @@ import cs1.Keyboard;
 import java.util.ArrayList;
 
 //game executer file
-public class woo{
+public class Woo{
     
     public static void main(String[] args) {
 	int turns = 0;
@@ -47,9 +47,9 @@ public class woo{
 		System.out.println(h0);
 		System.out.println("Pick the index of the card you want to play");
 		index = Keyboard.readInt();
-		//if (h0.hand.get(index).getID() < 10){
+		if (((Cards)(h0.hand.get(index))).getID() < 10){
 		    h0.play(index);
-		    //}
+		    }
 	    }
 	    cardNum += 1;
 	}
