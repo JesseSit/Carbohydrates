@@ -2,6 +2,7 @@ public abstract class Property extends Cards {
     protected String name;
     protected int[] rentVal = new int[4];
     protected int setNum;
+   
     public Property (){
 	name = "";
 	rentVal[0] = 0;
@@ -10,6 +11,7 @@ public abstract class Property extends Cards {
 	rentVal[3] = 0;
 	setNum = 0;
     }
+   
     public Property (int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
 	super(Val, id);
 	rentVal[0] = rentVal0;
@@ -18,9 +20,7 @@ public abstract class Property extends Cards {
 	rentVal[3] = rentVal3;
 	setNum = SetNum;
     }
-    public int getID(){
-	return ID;
-    }
+
     public String toString(){
 	String retStr = "";
 	retStr += "name: " + name + ", ";
