@@ -5,7 +5,10 @@ public class Human extends Player {
 	hand = new ArrayList<Cards>();
     }
     public String toString(){
-	System.out.println(hand.get(0));
-	return "";
+        String retStr = "";
+	for (int x = 0; x < hand.size(); x++){
+	    retStr += hand.get(x) + "\n";
+	}
+	return retStr;
     }
 }

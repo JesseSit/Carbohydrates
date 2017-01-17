@@ -11,8 +11,8 @@ public class woo{
 	
 	//create deck
 	ArrayList <Cards> deck = new ArrayList<Cards>();
-	Cards temp = new DarkBlue("broadwalk", 3, 8, 0, 0, 2);
-	Cards temp1 = new DarkBlue("park place", 3, 8, 0, 0, 2);
+	Cards temp = new DarkBlue("boardwalk", 4, 0, 3, 8, 0, 0, 2);
+	Cards temp1 = new DarkBlue("park place", 4, 0, 3, 8, 0, 0, 2);
 
 	deck.add(temp1);
 	for (int i = 0; i < 100; i++) {
@@ -44,9 +44,12 @@ public class woo{
 	int index;
 	while (cardNum < 3){
 	    if ((turns % amtPlayers) == 0){
+		System.out.println(h0);
 		System.out.println("Pick the index of the card you want to play");
-	    index = Keyboard.readInt();
-		h0.play(index);
+		index = Keyboard.readInt();
+		//if (h0.hand.get(index).getID() < 10){
+		    h0.play(index);
+		    //}
 	    }
 	    cardNum += 1;
 	}

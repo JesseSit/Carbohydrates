@@ -10,14 +10,30 @@ public abstract class Property extends Cards {
 	rentVal[3] = 0;
 	setNum = 0;
     }
-    public Property (int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
+    public Property (int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
+	super(Val, id);
 	rentVal[0] = rentVal0;
 	rentVal[1] = rentVal1;
 	rentVal[2] = rentVal2;
 	rentVal[3] = rentVal3;
 	setNum = SetNum;
     }
+    public int getID(){
+	return ID;
+    }
     public String toString(){
-	return name;
+	String retStr = "";
+	retStr += "name: " + name + ", ";
+	retStr += "value: " + value + ", ";
+	retStr += "rent for one:" + rentVal[0] + ", ";
+	retStr += "rent for two:" + rentVal[1] + ", ";
+	if (rentVal[2]!= 0){
+	    retStr += "rent for three:" + rentVal[2] + ", ";
+	}
+	if (rentVal[3] != 0){
+	    retStr += "rent for four:" + rentVal[3] + ", ";
+	}
+	retStr += "full set:" + setNum;
+	return retStr;
     }
 }

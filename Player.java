@@ -2,12 +2,6 @@ import java.util.ArrayList;
 
 public class Player {
     protected ArrayList hand;
-    public String toString(){
-	for (int x = 0; x < hand.size(); x++){
-	    System.out.println(hand.get(x));
-	}
-	return "";
-    }
     public void play(int index){
 	System.out.println(hand.remove(index));
     }
