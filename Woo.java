@@ -13,8 +13,12 @@ public class Woo{
 	ArrayList <Cards> deck = new ArrayList<Cards>();
 	Cards temp = new DarkBlue("boardwalk", 4, 0, 3, 8, 0, 0, 2);
 	Cards temp1 = new DarkBlue("park place", 4, 0, 3, 8, 0, 0, 2);
+	Cards temp2 = new Rent(1, 15, "Blue", "Green", false);
+	Cards temp3 = new Rent(1, 16, "NA", "NA", true);
 
 	deck.add(temp1);
+	deck.add(temp2);
+	deck.add(temp3);
 	for (int i = 0; i < 100; i++) {
 	    deck.add(temp);
 	}
