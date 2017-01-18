@@ -12,4 +12,7 @@ public abstract class Cards {
     public int getID(){
 	return ID;
     }
+    public int getVal(){
+	return value;
+    }
 }

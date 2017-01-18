@@ -137,6 +137,7 @@ Jesse :: added hand visibility to game execution
 2017-01-17
 --------------------------------------------------------------
 Xing Tao :: worked on expanding Woo.java, worked on README and worked on toString methods.
+Jesse Sit :: Worked on expanding Woo.java, added value accessor to Cards.java, added bank and property related methods to Player.java, and worked on toString methods.
 ==============================================================
 
 
