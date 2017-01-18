@@ -140,4 +140,9 @@ Xing Tao :: worked on expanding Woo.java, worked on README and worked on toStrin
 Jesse Sit :: Worked on expanding Woo.java, added value accessor to Cards.java, added bank and property related methods to Player.java, and worked on toString methods.
 ==============================================================
 
+2017-01-18
+--------------------------------------------------------------
+Xing Tao :: worked on making Rent work and added things to Woo.java in order to test Rent
+==============================================================
+
 
