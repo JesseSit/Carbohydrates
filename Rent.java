@@ -18,4 +18,15 @@ public class Rent extends Cards {
 	Multicolor = multi;
 	payAll = payall
     }
+
+    public String toString() {
+	String retStr = "";
+	retStr += "Rent Card :    "
+	if (Multicolor) {
+	    retStr += "Multicolor rent"
+	}
+	else {
+	    retStr += "Color0 : " + color0 + ", ";
+	    retStr += "Color1 : " + color1 + ", ";
+	}
 }
