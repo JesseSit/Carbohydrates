@@ -49,9 +49,29 @@ public class Woo{
 		index = Keyboard.readInt();
 		if (((Cards)(h0.hand.get(index))).getID() < 10){
 		    h0.play(index);
-		    }
+		}
+	    }
+	    if ((turns % amtPlayers) == 1){
+		System.out.println(h1); 
+		System.out.println("Pick the index of the card you want to play");
+		index = Keyboard.readInt();
+		if (((Cards)(h0.hand.get(index))).getID() < 10){
+		    h0.play(index);
+		}
+	    }
+	    if ((turns % amtPlayers) == 2){
+		System.out.println(h2);
+		System.out.println("Pick the index of the card you want to play");
+		index = Keyboard.readInt();
+		if (((Cards)(h0.hand.get(index))).getID() < 10){
+		    h0.play(index);
+		}
 	    }
 	    cardNum += 1;
+	    if (cardNum == 3) {
+		cardNum = 0;
+		turns += 1;
+	    }
 	}
 	
 	

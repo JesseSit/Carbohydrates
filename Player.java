@@ -22,7 +22,7 @@ public class Player {
     }
 
     public void addProperty(int index) {
-	if ((Cards)hand.get(index).getID() < 10) {
+	if (((Cards)hand.get(index)).getID() < 10) {
 	    bank.add(hand.remove(index));
 	}
     }
