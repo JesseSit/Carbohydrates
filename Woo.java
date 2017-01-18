@@ -63,7 +63,6 @@ public class Woo{
 		if (((Cards)(h0.hand.get(index))).getID() < 11){
 		    h0.addProperty(index);
 		}
-		h0.drawOne(deck);
 	    }
 	    if ((turns % amtPlayers) == 1){
 		System.out.println(h1); 
@@ -72,7 +71,6 @@ public class Woo{
 		if (((Cards)(h1.hand.get(index))).getID() < 11){
 		    h1.addProperty(index);
 		}
-		h1.drawOne(deck);
 	    }
 	    if ((turns % amtPlayers) == 2){
 		System.out.println(h2);
@@ -81,7 +79,6 @@ public class Woo{
 		if (((Cards)(h2.hand.get(index))).getID() < 11){
 		    h2.addProperty(index);
 		}
-		h2.drawOne(deck);
 	    }
 	    if ((turns % amtPlayers) == 3){
 		System.out.println(h3);
@@ -90,7 +87,6 @@ public class Woo{
 		if (((Cards)(h3.hand.get(index))).getID() < 11){
 		    h3.addProperty(index);
 		}
-		h3.drawOne(deck);
 	    }
 	    cardNum += 1;
 	    if (cardNum == 3) {
