@@ -54,9 +54,13 @@ public class Woo{
 	    h3 = new Human(name3);
 	    h3.draw(5, deck);
 	}
+	
 	int index;
 	while (cardNum < 3){
 	    if ((turns % amtPlayers) == 0){
+		if (cardNum == 0){
+		    h0.draw(2, deck);
+		}
 		System.out.println(h0);
 		System.out.println("Pick the index of the card you want to play:");
 		index = Keyboard.readInt();
@@ -65,6 +69,9 @@ public class Woo{
 		}
 	    }
 	    if ((turns % amtPlayers) == 1){
+		if (cardNum == 0){
+		    h1.draw(2, deck);
+		}
 		System.out.println(h1); 
 		System.out.println("Pick the index of the card you want to play:");
 		index = Keyboard.readInt();
@@ -73,6 +80,9 @@ public class Woo{
 		}
 	    }
 	    if ((turns % amtPlayers) == 2){
+		if (cardNum == 0){
+		    h2.draw(2, deck);
+		}
 		System.out.println(h2);
 		System.out.println("Pick the index of the card you want to play:");
 		index = Keyboard.readInt();
@@ -81,6 +91,9 @@ public class Woo{
 		}
 	    }
 	    if ((turns % amtPlayers) == 3){
+		if (cardNum == 0){
+		    h3.draw(2, deck);
+		}
 		System.out.println(h3);
 		System.out.println("Pick the index of the card you want to play:");
 		index = Keyboard.readInt();
