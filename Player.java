@@ -27,7 +27,7 @@ public class Player {
     }
     public void addBank(int index) {
 	if (((Cards)hand.get(index)).getID() >= 11) {
-	    Bank.add(hand.remove(index));
+	    bank.add(hand.remove(index));
 	}
     }
 }
