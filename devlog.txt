@@ -134,4 +134,9 @@ Xing Tao :: worked on fixing an error where playing a card wasn't working, creat
 Jesse :: added hand visibility to game execution
 ==============================================================
 
+2017-01-17
+--------------------------------------------------------------
+Xing Tao :: worked on expanding Woo.java, worked on README and worked on toString methods.
+==============================================================
+
 
