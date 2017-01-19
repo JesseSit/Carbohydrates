@@ -17,4 +17,11 @@ public class Action extends Cards {
     public String readDesc() {
 	return desc;
     }
+
+    public String toString() {
+	String retStr = "";
+	retStr += "Action Card:    "
+	retStr += "name: " + name + ", ";
+	retStr += "value: " + value + ", ";
+    }
 }
