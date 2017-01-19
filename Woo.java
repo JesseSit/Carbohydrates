@@ -73,11 +73,13 @@ public class Woo{
 		index = Keyboard.readInt();
 		if (index == 99) {
 		    turns += 1;
+		    cardNum = 0;
 		}
 		else {
 		    if (((Cards)(h0.hand.get(index))).getID() < 11){
 			h0.addProperty(index);
 		    }
+		    
 		}
 	    }
 	    //PLAYER 2 =========================================================
@@ -91,6 +93,7 @@ public class Woo{
 		index = Keyboard.readInt();
 		if (index == 99) {
 		    turns += 1;
+		    cardNum = 0;
 		}
 		else {
 		    if (((Cards)(h1.hand.get(index))).getID() < 11){
@@ -109,6 +112,7 @@ public class Woo{
 		index = Keyboard.readInt();
 		if (index == 99) {
 		    turns += 1;
+		    cardNum = 0;
 		}
 		else {
 		    if (((Cards)(h2.hand.get(index))).getID() < 11){
@@ -127,6 +131,7 @@ public class Woo{
 		index = Keyboard.readInt();
 		if (index == 99) {
 		    turns += 1;
+		    cardNum = 0;
 		}
 		else {
 		    if (((Cards)(h3.hand.get(index))).getID() < 11){
@@ -135,7 +140,26 @@ public class Woo{
 		}
 	    }
 	    cardNum += 1;
+//END OF TURN ==================================================================
 	    if (cardNum == 3) {
+		if ((turns % amtPlayers) == 0){
+		    if (h0.hand.size() > 7) {
+			System.out.println("You have too many cards in your hand. Please discard until you have 7 cards");
+			for (int x = 0; x < h0.hand.size() - 7; x++) {
+			    System.out.println(h0);
+			    System.out.println("Pick the index of the card that you wish to discard");
+			    index = Keyboard.readInt();
+			    ((Human)h0).discard(index);
+			} 
+		    }
+		}
+		if ((turns % amtPlayers) == 1){
+		}
+		if ((turns % amtPlayers) == 2){
+		}
+		if ((turns % amtPlayers) == 3){
+		}
+
 		cardNum = 0;
 		turns += 1;
 	    }
