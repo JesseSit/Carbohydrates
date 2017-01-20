@@ -1,0 +1,121 @@
+//CARD IDS =====================================================================
+//Property ID = 0-10
+//Money ID = 11-16
+//Rent ID = 17-22
+//Action ID = 23-32 (36 cards)
+
+//PROPERTY =====================================================================
+Cards prop = new Brown (, , , , , , ,);
+
+Cards prop = new DarkBlue(, , , , , , ,);
+
+Cards prop = new Green(, , , , , , ,);
+
+Cards prop = new LightBlue(, , , , , , ,);
+
+Cards prop = new Orange(, , , , , , ,);
+
+Cards prop = new Purple(, , , , , , ,);
+
+Cards prop = new Railroad(, , , , , , ,);
+
+Cards prop = new Red(, , , , , , ,);
+
+Cards prop = new Utility(, , , , , , ,);
+
+Cards prop = new Yellow(, , , , , , ,);
+
+//MONEY ========================================================================
+Cards money0 = new Money(10, 11);
+
+Cards money1 = new Money(1, 12);
+Cards money2 = new Money(1, 12);
+Cards money3 = new Money(1, 12);
+Cards money4 = new Money(1, 12);
+Cards money5 = new Money(1, 12);
+Cards money6 = new Money(1, 12);
+
+Cards money7 = new Money(2, 13);
+Cards money8 = new Money(2, 13);
+Cards money9 = new Money(2, 13);
+Cards money10 = new Money(2, 13);
+Cards money11 = new Money(2, 13);
+
+Cards money12 = new Money(3, 14);
+Cards money13 = new Money(3, 14);
+Cards money14 = new Money(3, 14);
+
+Cards money15 = new Money(4, 15);
+Cards money16 = new Money(4, 15);
+Cards money17 = new Money(4, 15);
+
+Cards money18 = new Money(5, 16);
+Cards money19 = new Money(5, 16);
+
+//RENT =========================================================================
+Cards rent = new Rent(3, 17, NA, NA, true);
+Cards rent = new Rent(3, 17, NA, NA, true);
+Cards rent = new Rent(3, 17, NA, NA, true);
+
+Cards rent = new Rent(1, 18, "Green", "DarkBlue", false);
+Cards rent = new Rent(1, 18, "Green", "DarkBlue", false);
+
+Cards rent = new Rent(1, 19, "Brown", "LightBlue", false);
+Cards rent = new Rent(1, 19, "Brown", "LightBlue", false);
+
+Cards rent = new Rent(1, 20, "Purple", "Orange", false);
+Cards rent = new Rent(1, 20, "Purple", "Orange", false);
+
+Cards rent = new Rent(1, 21, "Black", "White", false);
+Cards rent = new Rent(1, 21, "Black", "White", false);
+ 
+Cards rent = new Rent(1, 22, "Red", "Yellow", false);
+Cards rent = new Rent(1, 22, "Red", "Yellow", false);
+
+//ACTION =======================================================================
+Cards action0 = new Action(5, 23, "Deal Breaker", "Steal a complete set of properties from any player (Includes any buildings).");
+Cards action1 = new Action(5, 23, "Deal Breaker", "Steal a complete set of properties from any player (Includes any buildings).");
+
+Cards action2 = new Action(3, 24, "Debt Collector", "Force any player to pay you 5M.");
+Cards action3 = new Action(3, 24, "Debt Collector", "Force any player to pay you 5M.");
+Cards action4 = new Action(3, 24, "Debt Collector", "Force any player to pay you 5M.");
+
+Cards action5 = new Action(1, 25, "Double The Rent!", "Needs to be played with a rend card.");
+Cards action6 = new Action(1, 25, "Double The Rent!", "Needs to be played with a rend card.");
+
+Cards action7 = new Action(3, 26, "Forced Deal", "Swap any property with another player (Cannot be part of a full set).");
+Cards action8 = new Action(3, 26, "Forced Deal", "Swap any property with another player (Cannot be part of a full set).");
+Cards action9 = new Action(3, 26, "Forced Deal", "Swap any property with another player (Cannot be part of a full set).");
+Cards action10 = new Action(3, 26, "Forced Deal", "Swap any property with another player (Cannot be part of a full set).");
+
+Cards action11 = new Action(4, 27, "Hotel", "Add onto any full set you own to add $4M to the rent value.");
+Cards action12 = new Action(4, 27, "Hotel", "Add onto any full set you own to add $4M to the rent value.");
+Cards action13 = new Action(4, 27, "Hotel", "Add onto any full set you own to add $4M to the rent value.");
+
+Cards action14 = new Action(3, 28, "House", "Add onto any full set you own to add $3M to the rent value.");
+Cards action15 = new Action(3, 28, "House", "Add onto any full set you own to add $3M to the rent value.");
+Cards action16 = new Action(3, 28, "House", "Add onto any full set you own to add $3M to the rent value.");
+
+Cards action17 = new Action(2, 29, "It's My Birthday!", "All players give you $2M as a 'gift'.");
+Cards action18 = new Action(2, 29, "It's My Birthday!", "All players give you $2M as a 'gift'.");
+Cards action19 = new Action(2, 29, "It's My Birthday!", "All players give you $2M as a 'gift'.");
+
+Cards action20 = new Action(4, 30, "Just Say No!", "Use any time when an action card is played against you.");
+Cards action21 = new Action(4, 30, "Just Say No!", "Use any time when an action card is played against you.");
+Cards action22 = new Action(4, 30, "Just Say No!", "Use any time when an action card is played against you.");
+
+Cards action23 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action24 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action25 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action26 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action27 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action28 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action29 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action30 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action31 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+Cards action32 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+
+Cards action33 = new Action(3, 32, "Sly Deal", "Steal a property from the player of your choice (Cannot be part of a full set).");
+Cards action34 = new Action(3, 32, "Sly Deal", "Steal a property from the player of your choice (Cannot be part of a full set).");
+Cards action35 = new Action(3, 32, "Sly Deal", "Steal a property from the player of your choice (Cannot be part of a full set).");
+
