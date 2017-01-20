@@ -10,6 +10,7 @@ public class Woo{
 	
 //CREATE DECK ==================================================================
 	ArrayList <Cards> deck = new ArrayList<Cards>();
+	/*
 	Cards temp = new DarkBlue("boardwalk", 4, 0, 3, 8, 0, 0, 2);
 	Cards temp1 = new DarkBlue("park place", 4, 0, 3, 8, 0, 0, 2);
 	Cards temp2 = new Rent(1, 15, "Blue", "Green", false);
@@ -21,7 +22,8 @@ public class Woo{
 	for (int i = 0; i < 100; i++) {
 	    deck.add(temp);
 	}
-	
+	*/
+	createDeck(deck);
 	System.out.println("Please select the number of players (2-4):");
 
 //CREATE PLAYERS ===============================================================
@@ -209,5 +211,33 @@ public class Woo{
 		}
 	    }
 	}		
+    }
+
+    public static void createDeck(ArrayList <Cards> deck) {
+	//MONEY =================================================================
+	Cards money0 = new Money(10, 11);
+	Cards money1 = new Money(1, 12);
+	Cards money2 = new Money(2, 13);
+	Cards money3 = new Money(3, 14);
+	Cards money4 = new Money(4, 15);
+	Cards money5 = new Money(5, 16);
+	for (int x = 0; x < 1; x++) {
+	    deck.add(money0);
+	}
+	for (int x = 0; x < 6; x++) {
+	    deck.add(money1);
+	}
+	for (int x = 0; x < 5; x++) {
+	    deck.add(money2);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(money3);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(money4);
+	}
+	for (int x = 0; x < 2; x++) {
+	    deck.add(money5);
+	}
     }
 }
