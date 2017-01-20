@@ -147,4 +147,10 @@ Xing Tao :: worked on making Rent work and added things to Woo.java in order to 
 Joshel :: expanded Human.java functionality, added "end turn" functionality to Woo.java
 ==============================================================
 
+2017-01-18
+--------------------------------------------------------------
+Xing Tao :: worked on a bug concerning the pass turn and draw not working together.
+
+==============================================================
+
 

@@ -72,14 +72,31 @@ public class Woo{
 		System.out.println("Or: Enter 99 if you would like to end your turn.");
 		index = Keyboard.readInt();
 		if (index == 99) {
-		    turns += 1;
-		    cardNum = 0;
+		    cardNum = 3;
 		}
 		else {
+		    //PROPRETY CARDS===================================
 		    if (((Cards)(h0.hand.get(index))).getID() < 11){
 			h0.addProperty(index);
 		    }
-		    
+		    //MONEY CARDS================================
+		    else if (((Cards)(h0.hand.get(index))).getID() >= 11 && ((Cards)(h0.hand.get(index))).getID() <= 16) {
+			h0.addBank(index);
+		    }
+		    cardNum += 1;
+		}
+		if (cardNum == 3) {
+		    if (h0.hand.size() > 7) {
+			System.out.println("You have too many cards in your hand. Please discard until you have 7 cards");
+			for (int x = 0; x < h0.hand.size() - 7; x++) {
+			    System.out.println(h0);
+			    System.out.println("Pick the index of the card that you wish to discard");
+			    index = Keyboard.readInt();
+			    ((Human)h0).discard(index);
+			} 
+		    }
+		    cardNum = 0;
+		    turns += 1;
 		}
 	    }
 	    //PLAYER 2 =========================================================
@@ -92,13 +109,30 @@ public class Woo{
 		System.out.println("Or: Enter 99 if you would like to end your turn.");
 		index = Keyboard.readInt();
 		if (index == 99) {
-		    turns += 1;
-		    cardNum = 0;
+		    cardNum = 3;
 		}
 		else {
 		    if (((Cards)(h1.hand.get(index))).getID() < 11){
 			h1.addProperty(index);
 		    }
+		    //MONEY CARDS================================
+		    else if (((Cards)(h1.hand.get(index))).getID() >= 11 && ((Cards)(h1.hand.get(index))).getID() <= 16) {
+			h1.addBank(index);
+		    }
+		    cardNum += 1;
+		}
+		if (cardNum == 3) {
+		    if (h1.hand.size() > 7) {
+			System.out.println("You have too many cards in your hand. Please discard until you have 7 cards");
+			for (int x = 0; x < h1.hand.size() - 7; x++) {
+			    System.out.println(h1);
+			    System.out.println("Pick the index of the card that you wish to discard");
+			    index = Keyboard.readInt();
+			    ((Human)h1).discard(index);
+			} 
+		    }
+		    cardNum = 0;
+		    turns += 1;
 		}
 	    }
 	    //PLAYER 3 =========================================================
@@ -111,13 +145,30 @@ public class Woo{
 		System.out.println("Or: Enter 99 if you would like to end your turn.");
 		index = Keyboard.readInt();
 		if (index == 99) {
-		    turns += 1;
-		    cardNum = 0;
+		    cardNum = 3;
 		}
 		else {
 		    if (((Cards)(h2.hand.get(index))).getID() < 11){
 			h2.addProperty(index);
 		    }
+		    //MONEY CARDS================================
+		    else if (((Cards)(h2.hand.get(index))).getID() >= 11 && ((Cards)(h2.hand.get(index))).getID() <= 16) {
+			h2.addBank(index);
+		    }
+		    cardNum += 1;
+		}
+		if (cardNum == 3) {
+		    if (h2.hand.size() > 7) {
+			System.out.println("You have too many cards in your hand. Please discard until you have 7 cards");
+			for (int x = 0; x < h2.hand.size() - 7; x++) {
+			    System.out.println(h2);
+			    System.out.println("Pick the index of the card that you wish to discard");
+			    index = Keyboard.readInt();
+			    ((Human)h2).discard(index);
+			} 
+		    }
+		    cardNum = 0;
+		    turns += 1;
 		}
 	    }
 	    //PLAYER 4 =========================================================
@@ -137,31 +188,25 @@ public class Woo{
 		    if (((Cards)(h3.hand.get(index))).getID() < 11){
 			h3.addProperty(index);
 		    }
+		    //MONEY CARDS================================
+		    else if (((Cards)(h3.hand.get(index))).getID() >= 11 && ((Cards)(h3.hand.get(index))).getID() <= 16) {
+			h3.addBank(index);
+		    }
+		    cardNum += 1;
 		}
-	    }
-	    cardNum += 1;
-//END OF TURN ==================================================================
-	    if (cardNum == 3) {
-		if ((turns % amtPlayers) == 0){
-		    if (h0.hand.size() > 7) {
+		if (cardNum == 3) {
+		    if (h3.hand.size() > 7) {
 			System.out.println("You have too many cards in your hand. Please discard until you have 7 cards");
-			for (int x = 0; x < h0.hand.size() - 7; x++) {
-			    System.out.println(h0);
+			for (int x = 0; x < h3.hand.size() - 7; x++) {
+			    System.out.println(h3);
 			    System.out.println("Pick the index of the card that you wish to discard");
 			    index = Keyboard.readInt();
-			    ((Human)h0).discard(index);
+			    ((Human)h3).discard(index);
 			} 
 		    }
+		    cardNum = 0;
+		    turns += 1;
 		}
-		if ((turns % amtPlayers) == 1){
-		}
-		if ((turns % amtPlayers) == 2){
-		}
-		if ((turns % amtPlayers) == 3){
-		}
-
-		cardNum = 0;
-		turns += 1;
 	    }
 	}		
     }

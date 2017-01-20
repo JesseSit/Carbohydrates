@@ -21,13 +21,9 @@ public class Player {
     }
 
     public void addProperty(int index) {
-	if (((Cards)hand.get(index)).getID() < 11) {
 	    property.add(hand.remove(index));
-	}
     }
     public void addBank(int index) {
-	if (((Cards)hand.get(index)).getID() >= 11) {
 	    bank.add(hand.remove(index));
-	}
     }
 }
