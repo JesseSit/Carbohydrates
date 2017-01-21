@@ -20,8 +20,9 @@ public class Action extends Cards {
 
     public String toString() {
 	String retStr = "";
-	retStr += "Action Card:    "
+	retStr += "Action Card:    ";
 	retStr += "name: " + name + ", ";
 	retStr += "value: " + value + ", ";
+	return retStr;
     }
 }

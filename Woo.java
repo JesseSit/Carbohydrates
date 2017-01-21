@@ -10,23 +10,11 @@ public class Woo{
 	
 //CREATE DECK ==================================================================
 	ArrayList <Cards> deck = new ArrayList<Cards>();
-	/*
-	Cards temp = new DarkBlue("boardwalk", 4, 0, 3, 8, 0, 0, 2);
-	Cards temp1 = new DarkBlue("park place", 4, 0, 3, 8, 0, 0, 2);
-	Cards temp2 = new Rent(1, 15, "Blue", "Green", false);
-	Cards temp3 = new Rent(1, 16, "NA", "NA", true);
-
-	deck.add(temp1);
-	deck.add(temp2);
-	deck.add(temp3);
-	for (int i = 0; i < 100; i++) {
-	    deck.add(temp);
-	}
-	*/
 	createDeck(deck);
-	System.out.println("Please select the number of players (2-4):");
+	shuffle(deck);
 
 //CREATE PLAYERS ===============================================================
+	System.out.println("Please select the number of players (2-4):");
 	int amtPlayers = Keyboard.readInt();
 	if (amtPlayers > 4 || amtPlayers < 2) {
 	    System.out.println("Not in player range!");
@@ -81,9 +69,17 @@ public class Woo{
 		    if (((Cards)(h0.hand.get(index))).getID() < 11){
 			h0.addProperty(index);
 		    }
-		    //MONEY CARDS================================
+		    //MONEY CARDS=====================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 11 && ((Cards)(h0.hand.get(index))).getID() <= 16) {
 			h0.addBank(index);
+		    }
+		    //RENT CARDS =====================================
+		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
+			h0.playRent(index);
+		    }
+		    //ACTION CARDS ===================================
+		    else {
+			h0.playAction(index);
 		    }
 		    cardNum += 1;
 		}
@@ -239,5 +235,58 @@ public class Woo{
 	for (int x = 0; x < 2; x++) {
 	    deck.add(money5);
 	}
+	//ACTION==================================================================
+	Cards action0 = new Action(5, 23, "Deal Breaker", "Steal a complete set of properties from any player (Includes any buildings).");
+	Cards action1 = new Action(3, 24, "Debt Collector", "Force any player to pay you 5M.");
+	Cards action2 = new Action(1, 25, "Double The Rent!", "Needs to be played with a rend card.");
+	Cards action3 = new Action(3, 26, "Forced Deal", "Swap any property with another player (Cannot be part of a full set).");
+	Cards action4 = new Action(4, 27, "Hotel", "Add onto any full set you own to add $4M to the rent value.");
+	Cards action5 = new Action(3, 28, "House", "Add onto any full set you own to add $3M to the rent value.");
+	Cards action6 = new Action(2, 29, "It's My Birthday!", "All players give you $2M as a 'gift'.");
+	Cards action7 = new Action(4, 30, "Just Say No!", "Use any time when an action card is played against you.");
+	Cards action8 = new Action(1, 31, "Pass GO", "Draw 2 extra cards.");
+	Cards action9 = new Action(3, 32, "Sly Deal", "Steal a property from the player of your choice (Cannot be part of a full set).");
+	for (int x = 0; x < 2; x++) {
+	    deck.add(action0);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(action1);
+	}
+	for (int x = 0; x < 2; x++) {
+	    deck.add(action2);
+	}
+	for (int x = 0; x < 4; x++) {
+	    deck.add(action3);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(action4);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(action5);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(action6);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(action7);
+	}
+	for (int x = 0; x < 10; x++) {
+	    deck.add(action8);
+	}
+	for (int x = 0; x < 3; x++) {
+	    deck.add(action9);
+	}
+	//RENT=====================================================================================
+    }
+
+    private static void swap( int i, int j, ArrayList <Cards> Deck) {
+	Deck.set( i, Deck.set(j, Deck.get(i) ) );
+    }
+    
+    public static void shuffle (ArrayList <Cards> Deck) {
+    	for (int i = 0; i < Deck.size(); i += 1) {
+	    swap(i, (int)(Math.random() * Deck.size()), Deck);
+	}
     }
 }
+

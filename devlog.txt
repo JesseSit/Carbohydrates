@@ -154,5 +154,11 @@ Xing Tao :: worked on a bug concerning the pass turn and draw not working togeth
 
 2017-01-20
 --------------------------------------------------------------
+Xing Tao :: created methods for money and made money cards playable
 Joshel :: created text file containing all cards for the game
+==============================================================
+
+2017-01-21
+--------------------------------------------------------------
+Xing Tao :: created a shuffle deck function and used joshel's text file to create part of the deck. Also worked on being able to play other types of cards and worked on toString methods.
 ==============================================================

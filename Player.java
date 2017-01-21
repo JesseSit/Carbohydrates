@@ -21,9 +21,15 @@ public class Player {
     }
 
     public void addProperty(int index) {
-	    property.add(hand.remove(index));
+	property.add(hand.remove(index));
     }
     public void addBank(int index) {
-	    bank.add(hand.remove(index));
+	bank.add(hand.remove(index));
+    }
+    public void playRent(int index) {
+	hand.remove(index);
+    }
+    public void playAction(int index) {
+	hand.remove(index);
     }
 }
