@@ -5,25 +5,46 @@
 //Action ID = 23-32 (36 cards)
 
 //PROPERTY =====================================================================
-Cards prop = new Brown (, , , , , , ,);
+name,Val ,id ,rent0 ,rent1 ,rent2 ,rent3 ,setnum
+Cards prop = new Brown (“Baltic Avenue”, 1, 0, 1, 2, 0, 0, 2);
+Cards prop = new Brown (“Mediterranean Avenue”, 1, 0, 1, 2, 0, 0, 2);
 
-Cards prop = new DarkBlue(, , , , , , ,);
+Cards prop = new DarkBlue(“Boardwalk”, 4, 1, 3, 8, 0, 0, 2);
+Cards prop = new DarkBlue(“Park Place”, 4, 1, 3, 8, 0, 0, 2);
 
-Cards prop = new Green(, , , , , , ,);
+Cards prop = new Green(“North Carolina Avenue”, 4, 2, 2, 4, 7, 0, 3);
+Cards prop = new Green(“Pacific Avenue”, 4, 2, 2, 4, 7, 0, 3);
+Cards prop = new Green(“Pennsylvania Avenue”, 4, 2, 2, 4, 7, 0, 3);
 
-Cards prop = new LightBlue(, , , , , , ,);
+Cards prop = new LightBlue(“Connecticut Avenue”, 1, 3, 1, 2, 3, 0, 3);
+Cards prop = new LightBlue(“Oriental Avenue”, 1, 3, 1, 2, 3, 0, 3);
+Cards prop = new LightBlue(“Vermont Avenue”, 1, 3, 1, 2, 3, 0, 3);
 
-Cards prop = new Orange(, , , , , , ,);
+Cards prop = new Orange(“New York Avenue”, 2, 4, 1, 3, 5, 0, 3);
+Cards prop = new Orange(“St. James Place”, 2, 4, 1, 3, 5, 0, 3);
+Cards prop = new Orange(“Tennessee Avenue”, 2, 4, 1, 3, 5, 0, 3);
 
-Cards prop = new Purple(, , , , , , ,);
+Cards prop = new Purple(“St. Charles Place”, 2, 5, 1, 2, 4, 0, 3);
+Cards prop = new Purple(“Virginia Avenue”, 2, 5, 1, 2, 4, 0, 3);
+Cards prop = new Purple(“States Avenue”, 2, 5, 1, 2, 4, 0, 3);
 
-Cards prop = new Railroad(, , , , , , ,);
+Cards prop = new Railroad(“Short Line”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop = new Railroad(“B. & O. Railroad”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop = new Railroad(“Reading Railroad”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop = new Railroad(“Pennsylvania Railroad”, 2, 6, 1, 2, 3, 4, 4);
 
-Cards prop = new Red(, , , , , , ,);
+Cards prop = new Red(“Kentucky Avenue”, 3, 7, 2, 3, 6, 0, 3);
+Cards prop = new Red(“Indiana Avenue”, 3, 7, 2, 3, 6, 0, 3);
+Cards prop = new Red(“Illinois Avenue”, 3, 7, 2, 3, 6, 0, 3);
 
-Cards prop = new Utility(, , , , , , ,);
+Cards prop = new Utility(“Water Works”, 2, 8, 1, 2, 0, 0, 2);
+Cards prop = new Utility(“Electric Company”, 2, 8, 1, 2, 0, 0, 2);
 
-Cards prop = new Yellow(, , , , , , ,);
+Cards prop = new Yellow(“Ventnor Avenue”, 3, 9, 2, 4, 6, 0, 3);
+Cards prop = new Yellow(“Marvin Gardens”, 3, 9, 2, 4, 6, 0, 3);
+Cards prop = new Yellow(“Atlantic Avenue”, 3, 9, 2, 4, 6, 0, 3);
+
+Cards prop = new Wild(
 
 //MONEY ========================================================================
 Cards money0 = new Money(10, 11);

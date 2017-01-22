@@ -23,6 +23,7 @@ public class Action extends Cards {
 	retStr += "Action Card:    ";
 	retStr += "name: " + name + ", ";
 	retStr += "value: " + value + ", ";
+	retStr += "\n\t" + "description: " + desc;
 	return retStr;
     }
 }

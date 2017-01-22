@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Human extends Player {
-    public String name;
+    
 
     public Human(){
 	name = "";
@@ -24,19 +24,9 @@ public class Human extends Player {
 	    retStr += x + " : ";
 	    retStr += hand.get(x) + "\n";
 	}
-	retStr += "Bank:" + "\n";
-	for (int y = 0; y < bank.size(); y++){
-	    retStr += y + " : ";
-	    retStr += "$" + ((Cards)(bank.get(y))).getVal() + "\n";
-	}
-	retStr += "Property:" + "\n";
-	for (int z = 0; z < property.size(); z++){
-	    retStr += z + " : ";
-	    retStr += property.get(z) + "\n";
-	}
 	return retStr;
     }
-
+    
     public void discard(int index){
 	System.out.println(hand.remove(index));
     }

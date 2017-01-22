@@ -9,5 +9,6 @@ public class Wild extends Property {
 	color1 = "";
 	Multi_color = true;
     }
+    
 
 }
