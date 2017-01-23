@@ -5,8 +5,8 @@ public class Utility extends Property {
 	ID = 8;
 	rentVal[0] = 1;
 	rentVal[1] = 2;
-	rentVal[2] = 0;
-	rentVal[3] = 0;
+	rentVal[2] = 2;
+	rentVal[3] = 2;
 	setNum = 2;
 	color = "Utility";
     }
@@ -16,8 +16,8 @@ public class Utility extends Property {
 	ID = 8;
 	rentVal[0] = 1;
 	rentVal[1] = 2;
-	rentVal[2] = 0;
-	rentVal[3] = 0;
+	rentVal[2] = 2;
+	rentVal[3] = 2;
 	setNum = 2;
 	color = "Utility";
     }

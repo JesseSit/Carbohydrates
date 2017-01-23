@@ -6,7 +6,7 @@ public class Green extends Property {
 	rentVal[0] = 2;
 	rentVal[1] = 4;
 	rentVal[2] = 7;
-	rentVal[3] = 0;
+	rentVal[3] = 7;
 	setNum = 3;
 	color = "Green";
     }
@@ -17,7 +17,7 @@ public class Green extends Property {
 	rentVal[0] = 2;
 	rentVal[1] = 4;
 	rentVal[2] = 7;
-	rentVal[3] = 0;
+	rentVal[3] = 7;
 	setNum = 3;
 	color = "Green";
     }

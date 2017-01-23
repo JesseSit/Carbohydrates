@@ -29,4 +29,12 @@ public class Rent extends Cards {
 	}
 	return retStr;
     }
+
+    public String getColor0() {
+	return color0;
+    }
+
+    public String getColor1() {
+	return color1;
+    }
 }

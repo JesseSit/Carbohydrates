@@ -1,4 +1,4 @@
-Carbohydrates
+﻿Carbohydrates
 Jesse Sit
 Xing Tao Shi
 Joshel Xiedeng
@@ -28,25 +28,38 @@ Flesh out each category whenever necessary, appropriate.
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow we so BOSS bc...
+We sucessfully fixed problems with the Property class where it was impossible to check the amount you had in your own property by making a new class: PropHelper.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
+Rent still doesn't function properly.
+Ran out of time to work on Action cards.
+If you type something that isn't accounted for it gives you an error. 
+
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
+We learned that 2d arrays aren't allowed to have different inputs for different rows
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
+we changed property ownership to PropHelper bc in order to rent you had to be able to check how much of a property you owned.
+we changed ___ to ___ bc...
+we changed ___ to ___ bc...
+
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
 
+Manage time better, it would have been nice to realize how much time it would take to implement things
+Also think ahead, a lot of work had to be redone because it didn't accomadate for the next step
 
 
  ______   ______   __   __   __       ______   _______     
@@ -169,5 +182,6 @@ Jesse :: added property cards to cards text file. added getField() method to dis
 
 2017-01-22
 --------------------------------------------------------------
+Xing Tao :: added new class PropHelper, reorganized property of players, worked unsucessfully on implementing rent, made changes to Property, made Property align with new PropHelper, fixed bugs with WildCard.
 Jesse :: changed constructors for property. dealt will wild property cards in woo.java. added rent cards to deck.
 ==============================================================

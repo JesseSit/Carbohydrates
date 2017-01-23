@@ -54,8 +54,17 @@ public class Player {
     public void addBank(int index) {
 	bank.add(hand.remove(index));
     }
-    public void playRent(int index) {
-	hand.remove(index);
+    public int playRent(int index, Player x) {
+	int totalRent = 0;
+	for (int z = 0; z < 10; z++) {
+	    if (property.get(z).getColor() == ((Rent)(hand.get(index))).getColor0()) {
+		totalRent += property.get(z).rentVal[property.get(z).getAmt()];
+	    }
+	    if (property.get(z).getColor() == ((Rent)(hand.get(index))).getColor1()) {
+		totalRent += property.get(z).rentVal[property.get(z).getAmt()];
+	    }
+	}
+	return totalRent;
     }
     public void playAction(int index) {
 	hand.remove(index);

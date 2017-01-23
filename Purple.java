@@ -6,7 +6,7 @@ public class Purple extends Property {
 	rentVal[0] = 1;
 	rentVal[1] = 2;
 	rentVal[2] = 4;
-	rentVal[3] = 0;
+	rentVal[3] = 4;
 	setNum = 3;
 	color = "Purple";
     }
@@ -17,7 +17,7 @@ public class Purple extends Property {
 	rentVal[0] = 1;
 	rentVal[1] = 2;
 	rentVal[2] = 4;
-	rentVal[3] = 0;
+	rentVal[3] = 4;
 	setNum = 3;
 	color = "Purple";
     }

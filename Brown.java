@@ -5,8 +5,8 @@ public class Brown extends Property {
 	ID = 0;
 	rentVal[0] = 1;
 	rentVal[1] = 2;
-	rentVal[2] = 0;
-	rentVal[3] = 0;
+	rentVal[2] = 2;
+	rentVal[3] = 2;
 	setNum = 2;
 	color = "Brown";
     }
@@ -16,8 +16,8 @@ public class Brown extends Property {
 	ID = 0;
 	rentVal[0] = 1;
 	rentVal[1] = 2;
-	rentVal[2] = 0;
-	rentVal[3] = 0;
+	rentVal[2] = 2;
+	rentVal[3] = 2;
 	setNum = 2;
 	color = "Brown";
     }

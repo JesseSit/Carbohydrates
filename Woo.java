@@ -19,7 +19,7 @@ public class Woo{
 	if (amtPlayers > 4 || amtPlayers < 2) {
 	    System.out.println("Not in player range!");
 	}
-	
+	//check how many players there are and then instantiate them
 	Player h0 = new Human();
 	if (amtPlayers > 0){
 	    System.out.println("Please state player one's name:");
@@ -58,6 +58,7 @@ public class Woo{
 	    //PLAYER 1 =========================================================
 	    System.out.println("======================== Turn " + turns + "==============================================");
 	    if ((turns % amtPlayers) == 0){
+		//prints everyone's boards
 		System.out.println(h0.getField());
 		if (amtPlayers > 1){
 		    System.out.println(h1.getField());
@@ -71,74 +72,93 @@ public class Woo{
 		if (cardNum == 0){
 		    h0.draw(2, deck);
 		}
-		System.out.println(h0);
+		System.out.println(h0);//prints the current player's hand
 		System.out.println("Pick the index of the card you want to play:");
 		System.out.println("Or: Enter 99 if you would like to end your turn.");
 		index = Keyboard.readInt();
-		if (index == 99) {
+		if (index == 99) {//checks to see if you end turn
 		    cardNum = 3;
 		}
 		else {
 		    //PROPRETY CARDS============================================
-		    if (((Cards)(h0.hand.get(index))).getID() < 10){
-		        h0.addProperty(index);
-		    }
-		    if (((Cards)(h0.hand.get(index))).getID() == 10){
-			System.out.println("Pick color of wildcard:");
-			wildColor = Keyboard.readString();
-			if (wildColor.equals("Brown")){
-			    prop99 = new Brown();
+		    if (((Cards)(h0.hand.get(index))).getID() <= 10){
+			if (((Cards)(h0.hand.get(index))).getID() == 10){
+			    System.out.println("Pick color of wildcard:");
+			    wildColor = Keyboard.readString();
+			    if (wildColor.equals("Brown")){
+				prop99 = new Brown();
+			    }
+			    if (wildColor.equals("DarkBlue")){
+				prop99 = new DarkBlue();
+			    }
+			    if (wildColor.equals("Green")){
+				prop99 = new Green();
+			    }
+			    if (wildColor.equals("LightBlue")){
+				prop99 = new LightBlue();
+			    }
+			    if (wildColor.equals("Orange")){
+				prop99 = new Orange();
+			    }
+			    if (wildColor.equals("Purple")){
+				prop99 = new Purple();
+			    }
+			    if (wildColor.equals("Railroad")){
+				prop99 = new Railroad();
+			    }
+			    if (wildColor.equals("Red")){
+				prop99 = new Red();
+			    }
+			    if (wildColor.equals("Utility")){
+				prop99 = new Utility();
+			    }
+			    if (wildColor.equals("Yellow")){
+				prop99 = new Yellow();
+			    }
+			    //takes a color...
+			    h0.addProperty(prop99);// and adds it to property
+			    ((Human)h0).discard(index);//then removes it from your hand
 			}
-			if (wildColor.equals("DarkBlue")){
-			    prop99 = new DarkBlue();
+			else {
+			    h0.addProperty(index);//if its not a wild card just add it
 			}
-			if (wildColor.equals("Green")){
-			    prop99 = new Green();
-			}
-			if (wildColor.equals("LightBlue")){
-			    prop99 = new LightBlue();
-			}
-			if (wildColor.equals("Orange")){
-			    prop99 = new Orange();
-			}
-			if (wildColor.equals("Purple")){
-			    prop99 = new Purple();
-			}
-			if (wildColor.equals("Railroad")){
-			    prop99 = new Railroad();
-			}
-			if (wildColor.equals("Red")){
-			    prop99 = new Red();
-			}
-			if (wildColor.equals("Utility")){
-			    prop99 = new Utility();
-			}
-			if (wildColor.equals("Yellow")){
-			    prop99 = new Yellow();
-			}
-			h0.addProperty(prop99);
-		        ((Human)h0).discard(index);
 		    }
 			
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 11 && ((Cards)(h0.hand.get(index))).getID() <= 16) {
-			h0.addBank(index);
+			h0.addBank(index); //add the money card to you bank
 		    }
 		    //RENT CARDS ===============================================
+		    //unfinished
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
 			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("collect")){
 			    //System.out.println("Pick property color:");
 			    //rentColor = Keyboard.readString();
 			    // System.out.println("Enter which player you want to collet from (e.g. h0 for the first player):");
+			    System.out.println("Please choose which player you want to rent. From 0 - " + amtPlayers);
+			    int rentedPlayer = Keyboard.readInt();
+			    //checks which player you want to rent
 			    
-			    h0.playRent(index);
+			    if (rentedPlayer == 0) {
+				System.out.println("Player0" + " must pay " + h0.playRent(index, h0));//playRent returns the value which you need to pay. Forcing a player to pay isn't implemented.
+			    }
+			    if (rentedPlayer == 1) {
+				System.out.println("Player1" + " must pay " + h0.playRent(index, h1));
+			    }
+			    if (rentedPlayer == 2) {
+				System.out.println("Player2" + " must pay " + h0.playRent(index, h2));
+			    }
+			    if (rentedPlayer == 3) {
+				System.out.println("Player3" + " must pay " + h0.playRent(index, h3));
+			    }
 			}
 			else {
 			    h0.addBank(index);
 			}
 		    }
 		    //ACTION CARDS =============================================
+		    //unfinished
 		    else {
 			System.out.println("If you want to play action, type 'play'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("play")){
@@ -187,51 +207,74 @@ public class Woo{
 		else {
 		    //PROPRETY CARDS============================================
 		    if (((Cards)(h1.hand.get(index))).getID() < 11){
+			if (((Cards)(h1.hand.get(index))).getID() == 10){
+			    System.out.println("Pick color of wildcard:");
+			    wildColor = Keyboard.readString();
+			    if (wildColor.equals("Brown")){
+				prop99 = new Brown();
+			    }
+			    if (wildColor.equals("DarkBlue")){
+				prop99 = new DarkBlue();
+			    }
+			    if (wildColor.equals("Green")){
+				prop99 = new Green();
+			    }
+			    if (wildColor.equals("LightBlue")){
+				prop99 = new LightBlue();
+			    }
+			    if (wildColor.equals("Orange")){
+				prop99 = new Orange();
+			    }
+			    if (wildColor.equals("Purple")){
+				prop99 = new Purple();
+			    }
+			    if (wildColor.equals("Railroad")){
+				prop99 = new Railroad();
+			    }
+			    if (wildColor.equals("Red")){
+				prop99 = new Red();
+			    }
+			    if (wildColor.equals("Utility")){
+				prop99 = new Utility();
+			    }
+			    if (wildColor.equals("Yellow")){
+				prop99 = new Yellow();
+			    }
+			    h1.addProperty(prop99);
+			    ((Human)h1).discard(index);
+			}
 			h1.addProperty(index);
-		    }
-		    if (((Cards)(h1.hand.get(index))).getID() == 10){
-			System.out.println("Pick color of wildcard:");
-			wildColor = Keyboard.readString();
-			if (wildColor.equals("Brown")){
-			    prop99 = new Brown();
-			}
-			if (wildColor.equals("DarkBlue")){
-			    prop99 = new DarkBlue();
-			}
-			if (wildColor.equals("Green")){
-			    prop99 = new Green();
-			}
-			if (wildColor.equals("LightBlue")){
-			    prop99 = new LightBlue();
-			}
-			if (wildColor.equals("Orange")){
-			    prop99 = new Orange();
-			}
-			if (wildColor.equals("Purple")){
-			    prop99 = new Purple();
-			}
-			if (wildColor.equals("Railroad")){
-			    prop99 = new Railroad();
-			}
-			if (wildColor.equals("Red")){
-			    prop99 = new Red();
-			}
-			if (wildColor.equals("Utility")){
-			    prop99 = new Utility();
-			}
-			if (wildColor.equals("Yellow")){
-			    prop99 = new Yellow();
-			}
-			h1.addProperty(prop99);
-		        ((Human)h1).discard(index);
 		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h1.hand.get(index))).getID() >= 11 && ((Cards)(h1.hand.get(index))).getID() <= 16) {
 			h1.addBank(index);
 		    }
 		    //RENT CARDS ===============================================
-		    else if (((Cards)(h1.hand.get(index))).getID() >= 17 && ((Cards)(h1.hand.get(index))).getID() <= 22) {
-			h1.playRent(index);
+		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
+			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
+			if(Keyboard.readString().equals("collect")){
+			    //System.out.println("Pick property color:");
+			    //rentColor = Keyboard.readString();
+			    // System.out.println("Enter which player you want to collet from (e.g. h0 for the first player):");
+			    System.out.println("Please choose which player you want to rent. From 0 - " + amtPlayers);
+			    int rentedPlayer = Keyboard.readInt();
+			    
+			    if (rentedPlayer == 0) {
+				System.out.println("Player0" + " must pay " + h1.playRent(index, h0));
+			    }
+			    if (rentedPlayer == 1) {
+				System.out.println("Player1" + " must pay " + h1.playRent(index, h1));
+			    }
+			    if (rentedPlayer == 2) {
+				System.out.println("Player2" + " must pay " + h1.playRent(index, h2));
+			    }
+			    if (rentedPlayer == 3) {
+				System.out.println("Player3" + " must pay " + h1.playRent(index, h3));
+			    }
+			}
+			else {
+			    h0.addBank(index);
+			}
 		    }
 		    //ACTION CARDS =============================================
 		    else {
@@ -280,51 +323,74 @@ public class Woo{
 		else {
 		    //PROPRETY CARDS============================================
 		    if (((Cards)(h2.hand.get(index))).getID() < 11){
+			if (((Cards)(h2.hand.get(index))).getID() == 10){
+			    System.out.println("Pick color of wildcard:");
+			    wildColor = Keyboard.readString();
+			    if (wildColor.equals("Brown")){
+				prop99 = new Brown();
+			    }
+			    if (wildColor.equals("DarkBlue")){
+				prop99 = new DarkBlue();
+			    }
+			    if (wildColor.equals("Green")){
+				prop99 = new Green();
+			    }
+			    if (wildColor.equals("LightBlue")){
+				prop99 = new LightBlue();
+			    }
+			    if (wildColor.equals("Orange")){
+				prop99 = new Orange();
+			    }
+			    if (wildColor.equals("Purple")){
+				prop99 = new Purple();
+			    }
+			    if (wildColor.equals("Railroad")){
+				prop99 = new Railroad();
+			    }
+			    if (wildColor.equals("Red")){
+				prop99 = new Red();
+			    }
+			    if (wildColor.equals("Utility")){
+				prop99 = new Utility();
+			    }
+			    if (wildColor.equals("Yellow")){
+				prop99 = new Yellow();
+			    }
+			    h2.addProperty(prop99);
+			    ((Human)h2).discard(index);
+			}
 			h2.addProperty(index);
-		    }
-		    if (((Cards)(h2.hand.get(index))).getID() == 10){
-			System.out.println("Pick color of wildcard:");
-			wildColor = Keyboard.readString();
-			if (wildColor.equals("Brown")){
-			    prop99 = new Brown();
-			}
-			if (wildColor.equals("DarkBlue")){
-			    prop99 = new DarkBlue();
-			}
-			if (wildColor.equals("Green")){
-			    prop99 = new Green();
-			}
-			if (wildColor.equals("LightBlue")){
-			    prop99 = new LightBlue();
-			}
-			if (wildColor.equals("Orange")){
-			    prop99 = new Orange();
-			}
-			if (wildColor.equals("Purple")){
-			    prop99 = new Purple();
-			}
-			if (wildColor.equals("Railroad")){
-			    prop99 = new Railroad();
-			}
-			if (wildColor.equals("Red")){
-			    prop99 = new Red();
-			}
-			if (wildColor.equals("Utility")){
-			    prop99 = new Utility();
-			}
-			if (wildColor.equals("Yellow")){
-			    prop99 = new Yellow();
-			}
-			h2.addProperty(prop99);
-		        ((Human)h2).discard(index);
 		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h2.hand.get(index))).getID() >= 11 && ((Cards)(h2.hand.get(index))).getID() <= 16) {
 			h2.addBank(index);
 		    }
 		    //RENT CARDS ===============================================
-		    else if (((Cards)(h2.hand.get(index))).getID() >= 17 && ((Cards)(h2.hand.get(index))).getID() <= 22) {
-			h2.playRent(index);
+		    		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
+			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
+			if(Keyboard.readString().equals("collect")){
+			    //System.out.println("Pick property color:");
+			    //rentColor = Keyboard.readString();
+			    // System.out.println("Enter which player you want to collet from (e.g. h0 for the first player):");
+			    System.out.println("Please choose which player you want to rent. From 0 - " + amtPlayers);
+			    int rentedPlayer = Keyboard.readInt();
+			    
+			    if (rentedPlayer == 0) {
+				h2.playRent(index, h0);
+			    }
+			    if (rentedPlayer == 1) {
+				h2.playRent(index, h1);
+			    }
+			    if (rentedPlayer == 2) {
+				h2.playRent(index, h2);
+			    }
+			    if (rentedPlayer == 3) {
+				h2.playRent(index, h3);
+			    }
+			    else {
+				h0.addBank(index);
+			    }
+			}
 		    }
 		    //ACTION CARDS =============================================
 		    else {
@@ -372,51 +438,74 @@ public class Woo{
 		else {
 		    //PROPRETY CARDS============================================
 		    if (((Cards)(h3.hand.get(index))).getID() < 11){
+			if (((Cards)(h3.hand.get(index))).getID() == 10){
+			    System.out.println("Pick color of wildcard:");
+			    wildColor = Keyboard.readString();
+			    if (wildColor.equals("Brown")){
+				prop99 = new Brown();
+			    }
+			    if (wildColor.equals("DarkBlue")){
+				prop99 = new DarkBlue();
+			    }
+			    if (wildColor.equals("Green")){
+				prop99 = new Green();
+			    }
+			    if (wildColor.equals("LightBlue")){
+				prop99 = new LightBlue();
+			    }
+			    if (wildColor.equals("Orange")){
+				prop99 = new Orange();
+			    }
+			    if (wildColor.equals("Purple")){
+				prop99 = new Purple();
+			    }
+			    if (wildColor.equals("Railroad")){
+				prop99 = new Railroad();
+			    }
+			    if (wildColor.equals("Red")){
+				prop99 = new Red();
+			    }
+			    if (wildColor.equals("Utility")){
+				prop99 = new Utility();
+			    }
+			    if (wildColor.equals("Yellow")){
+				prop99 = new Yellow();
+			    }
+			    h3.addProperty(prop99);
+			    ((Human)h3).discard(index);
+			}
 			h3.addProperty(index);
-		    }
-		    if (((Cards)(h3.hand.get(index))).getID() == 10){
-			System.out.println("Pick color of wildcard:");
-			wildColor = Keyboard.readString();
-			if (wildColor.equals("Brown")){
-			    prop99 = new Brown();
-			}
-			if (wildColor.equals("DarkBlue")){
-			    prop99 = new DarkBlue();
-			}
-			if (wildColor.equals("Green")){
-			    prop99 = new Green();
-			}
-			if (wildColor.equals("LightBlue")){
-			    prop99 = new LightBlue();
-			}
-			if (wildColor.equals("Orange")){
-			    prop99 = new Orange();
-			}
-			if (wildColor.equals("Purple")){
-			    prop99 = new Purple();
-			}
-			if (wildColor.equals("Railroad")){
-			    prop99 = new Railroad();
-			}
-			if (wildColor.equals("Red")){
-			    prop99 = new Red();
-			}
-			if (wildColor.equals("Utility")){
-			    prop99 = new Utility();
-			}
-			if (wildColor.equals("Yellow")){
-			    prop99 = new Yellow();
-			}
-			h3.addProperty(prop99);
-		        ((Human)h3).discard(index);
 		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h3.hand.get(index))).getID() >= 11 && ((Cards)(h3.hand.get(index))).getID() <= 16) {
 			h3.addBank(index);
 		    }
 		    //RENT CARDS ===============================================
-		    else if (((Cards)(h3.hand.get(index))).getID() >= 17 && ((Cards)(h3.hand.get(index))).getID() <= 22) {
-			h3.playRent(index);
+		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
+			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
+			if(Keyboard.readString().equals("collect")){
+			    //System.out.println("Pick property color:");
+			    //rentColor = Keyboard.readString();
+			    // System.out.println("Enter which player you want to collet from (e.g. h0 for the first player):");
+			    System.out.println("Please choose which player you want to rent. From 0 - " + amtPlayers);
+			    int rentedPlayer = Keyboard.readInt();
+			    
+			    if (rentedPlayer == 0) {
+				h3.playRent(index, h0);
+			    }
+			    if (rentedPlayer == 1) {
+				h3.playRent(index, h1);
+			    }
+			    if (rentedPlayer == 2) {
+				h3.playRent(index, h2);
+			    }
+			    if (rentedPlayer == 3) {
+				h3.playRent(index, h3);
+			    }
+			    else {
+				h0.addBank(index);
+			    }
+			}
 		    }
 		    //ACTION CARDS =============================================
 		    else {

@@ -5,8 +5,8 @@ public class DarkBlue extends Property {
 	ID = 1;
 	rentVal[0] = 3;
 	rentVal[1] = 8;
-	rentVal[2] = 0;
-	rentVal[3] = 0;
+	rentVal[2] = 8;
+	rentVal[3] = 8;
 	setNum = 2;
 	color = "DarkBlue";
 	    
@@ -17,8 +17,8 @@ public class DarkBlue extends Property {
 	ID = 1;
 	rentVal[0] = 3;
 	rentVal[1] = 8;
-	rentVal[2] = 0;
-	rentVal[3] = 0;
+	rentVal[2] = 8;
+	rentVal[3] = 8;
 	setNum = 2;
 	color = "DarkBlue";
 	    
