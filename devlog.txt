@@ -184,4 +184,5 @@ Jesse :: added property cards to cards text file. added getField() method to dis
 --------------------------------------------------------------
 Xing Tao :: added new class PropHelper, reorganized property of players, worked unsucessfully on implementing rent, made changes to Property, made Property align with new PropHelper, fixed bugs with WildCard.
 Jesse :: changed constructors for property. dealt will wild property cards in woo.java. added rent cards to deck.
+Joshel :: created final UML diagram
 ==============================================================
