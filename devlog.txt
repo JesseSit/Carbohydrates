@@ -1,4 +1,4 @@
-﻿Carbohydrates
+Carbohydrates
 Jesse Sit
 Xing Tao Shi
 Joshel Xiedeng
@@ -59,7 +59,8 @@ tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
 
 Manage time better, it would have been nice to realize how much time it would take to implement things
-Also think ahead, a lot of work had to be redone because it didn't accomadate for the next step
+Discussing a work schedule early on would have allowed for better work flow.
+Also think ahead, a lot of work had to be redone because it didn't accomodate for the next step
 
 
  ______   ______   __   __   __       ______   _______     
@@ -182,7 +183,12 @@ Jesse :: added property cards to cards text file. added getField() method to dis
 
 2017-01-22
 --------------------------------------------------------------
-Xing Tao :: added new class PropHelper, reorganized property of players, worked unsucessfully on implementing rent, made changes to Property, made Property align with new PropHelper, fixed bugs with WildCard.
+Xing Tao :: added new class PropHelper, reorganized property of players, worked unsucessfully on implementing rent, made changes to Property, made Property align with new PropHelper, fixed bugs with WildCard. Finalized flowchart.
 Jesse :: changed constructors for property. dealt will wild property cards in woo.java. added rent cards to deck.
+<<<<<<< HEAD
 Joshel :: created final UML diagram
 ==============================================================
+=======
+Joshel :: Finalized uml.
+==============================================================
+>>>>>>> f8e5a1cf61d75fb6661a66ccbc9d57116af8a021
