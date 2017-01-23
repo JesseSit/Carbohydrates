@@ -10,10 +10,23 @@ public class Wild extends Property {
 	Multi_color = true;
     }
     
-    public Wild(int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3,  int setNum, String c0, String c1, boolean x) {
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, setNum);
+    public Wild(int Val, String c0, String c1, boolean x) {
+	value = Val;
+	ID = 10;
 	color0 = c0;
 	color1 = c1;
 	Multi_color = x;
+    }
+    public String toString(){
+	String retStr = "";
+	retStr += "Wild card: ";
+	if (Multi_color == true){
+	    retStr += "MultiColor Property";
+	}
+	else {
+	    retStr += "color one: " + color0 + ", ";
+	    retStr += "color two: " + color1;
+	}
+	return retStr;
     }
 }

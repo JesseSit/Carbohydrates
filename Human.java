@@ -17,7 +17,7 @@ public class Human extends Player {
 	property = new ArrayList <PropHelper>();
 	PropHelper PropHelper0 = new PropHelper("Brown", 0);
 	property.add(PropHelper0);
-	PropHelper PropHelper1 = new PropHelper("DarkBLue", 0);
+	PropHelper PropHelper1 = new PropHelper("DarkBlue", 0);
 	property.add(PropHelper1);
 	PropHelper PropHelper2 = new PropHelper("Green", 0);
 	property.add(PropHelper2);

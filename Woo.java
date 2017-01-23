@@ -487,6 +487,15 @@ public class Woo{
 	Cards prop26 = new Yellow("Marvin Gardens");
 	Cards prop27 = new Yellow("Atlantic Avenue");
 
+	Cards prop28 = new Wild(4, "DarkBlue", "Green", false);
+	Cards prop29 = new Wild(1, "LightBlue", "Brown", false);
+	Cards prop30 = new Wild(1, "N/A", "N/A", true);
+	Cards prop31 = new Wild(2, "Orange", "Purple", false);
+	Cards prop32 = new Wild(4, "Green", "Railroad", false);
+	Cards prop33 = new Wild(4, "LightBlue", "Railroad", false);
+	Cards prop34 = new Wild(2, "Utility", "Railroad", false);
+	Cards prop35 = new Wild(3, "Yellow", "Red", false);
+
 	deck.add(prop0);
 	deck.add(prop1);
 	deck.add(prop2);
@@ -515,6 +524,17 @@ public class Woo{
 	deck.add(prop25);
 	deck.add(prop26);
 	deck.add(prop27);
+	deck.add(prop28);
+	deck.add(prop29);
+	deck.add(prop30);
+	deck.add(prop30);
+	deck.add(prop31);
+	deck.add(prop31);
+	deck.add(prop32);
+	deck.add(prop33);
+	deck.add(prop34);
+	deck.add(prop35);
+	deck.add(prop35);
 
 	//MONEY ================================================================
 	Cards money0 = new Money(10, 11);
