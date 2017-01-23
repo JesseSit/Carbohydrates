@@ -5,7 +5,6 @@
 //Action ID = 23-32 (36 cards)
 
 //PROPERTY =====================================================================
-name,Val ,id ,rent0 ,rent1 ,rent2 ,rent3 ,setnum
 Cards prop = new Brown (“Baltic Avenue”, 1, 0, 1, 2, 0, 0, 2);
 Cards prop = new Brown (“Mediterranean Avenue”, 1, 0, 1, 2, 0, 0, 2);
 

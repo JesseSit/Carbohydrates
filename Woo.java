@@ -85,7 +85,14 @@ public class Woo{
 		    }
 		    //RENT CARDS =====================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
-			h0.playRent(index);
+			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
+			if(Keyboard.readString().equals("collect")){
+			    System.out.println("Pick property color:");
+			    h0.playRent(index);
+			}
+			else {
+			    h0.addBank(index);
+			}
 		    }
 		    //ACTION CARDS ===================================
 		    else {
@@ -115,15 +122,15 @@ public class Woo{
 	    }
 	    //PLAYER 2 =========================================================
 	    if ((turns % amtPlayers) == 1){
+		System.out.println(h0.getField());
+		System.out.println(h1.getField());
+		if (amtPlayers > 2){
+		    System.out.println(h2.getField());
+		}
+		if (amtPlayers > 3){
+		    System.out.println(h3.getField());
+		}
 		if (cardNum == 0){
-		    System.out.println(h0.getField());
-		    System.out.println(h1.getField());
-		    if (amtPlayers > 2){
-			System.out.println(h2.getField());
-		    }
-		    if (amtPlayers > 3){
-			System.out.println(h3.getField());
-		    }
 		    h1.draw(2, deck);
 		}
 		System.out.println(h1); 
@@ -290,7 +297,72 @@ public class Woo{
 
     public static void createDeck(ArrayList <Cards> deck) {
 	//PROPERTY ==============================================================
+	Cards prop0 = new Brown ("Baltic Avenue", 1, 0, 1, 2, 0, 0, 2);
+	Cards prop1 = new Brown ("Mediterranean Avenue", 1, 0, 1, 2, 0, 0, 2);
 
+	Cards prop2 = new DarkBlue("Boardwalk", 4, 1, 3, 8, 0, 0, 2);
+	Cards prop3 = new DarkBlue("Park Place", 4, 1, 3, 8, 0, 0, 2);
+
+	Cards prop4 = new Green("North Carolina Avenue", 4, 2, 2, 4, 7, 0, 3);
+	Cards prop5 = new Green("Pacific Avenue", 4, 2, 2, 4, 7, 0, 3);
+	Cards prop6 = new Green("Pennsylvania Avenue", 4, 2, 2, 4, 7, 0, 3);
+
+	Cards prop7 = new LightBlue("Connecticut Avenue", 1, 3, 1, 2, 3, 0, 3);
+	Cards prop8 = new LightBlue("Oriental Avenue", 1, 3, 1, 2, 3, 0, 3);
+	Cards prop9 = new LightBlue("Vermont Avenue", 1, 3, 1, 2, 3, 0, 3);
+
+	Cards prop10 = new Orange("New York Avenue", 2, 4, 1, 3, 5, 0, 3);
+	Cards prop11 = new Orange("St. James Place", 2, 4, 1, 3, 5, 0, 3);
+	Cards prop12 = new Orange("Tennessee Avenue", 2, 4, 1, 3, 5, 0, 3);
+
+	Cards prop13 = new Purple("St. Charles Place", 2, 5, 1, 2, 4, 0, 3);
+	Cards prop14 = new Purple("Virginia Avenue", 2, 5, 1, 2, 4, 0, 3);
+	Cards prop15 = new Purple("States Avenue", 2, 5, 1, 2, 4, 0, 3);
+
+	Cards prop16 = new Railroad("Short Line", 2, 6, 1, 2, 3, 4, 4);
+	Cards prop17 = new Railroad("B. & O. Railroad", 2, 6, 1, 2, 3, 4, 4);
+	Cards prop18 = new Railroad("Reading Railroad", 2, 6, 1, 2, 3, 4, 4);
+	Cards prop19 = new Railroad("Pennsylvania Railroad", 2, 6, 1, 2, 3, 4, 4);
+
+	Cards prop20 = new Red("Kentucky Avenue", 3, 7, 2, 3, 6, 0, 3);
+	Cards prop21 = new Red("Indiana Avenue", 3, 7, 2, 3, 6, 0, 3);
+	Cards prop22 = new Red("Illinois Avenue", 3, 7, 2, 3, 6, 0, 3);
+
+	Cards prop23 = new Utility("Water Works", 2, 8, 1, 2, 0, 0, 2);
+	Cards prop24 = new Utility("Electric Company", 2, 8, 1, 2, 0, 0, 2);
+
+	Cards prop25 = new Yellow("Ventnor Avenue", 3, 9, 2, 4, 6, 0, 3);
+	Cards prop26 = new Yellow("Marvin Gardens", 3, 9, 2, 4, 6, 0, 3);
+	Cards prop27 = new Yellow("Atlantic Avenue", 3, 9, 2, 4, 6, 0, 3);
+
+	deck.add(prop0);
+	deck.add(prop1);
+	deck.add(prop2);
+	deck.add(prop3);
+	deck.add(prop4);
+	deck.add(prop5);
+	deck.add(prop6);
+	deck.add(prop7);
+	deck.add(prop8);
+	deck.add(prop9);
+	deck.add(prop10);
+	deck.add(prop11);
+	deck.add(prop12);
+	deck.add(prop13);
+	deck.add(prop14);
+	deck.add(prop15);
+	deck.add(prop16);
+	deck.add(prop17);
+	deck.add(prop18);
+	deck.add(prop19);
+	deck.add(prop20);
+	deck.add(prop21);
+	deck.add(prop22);
+	deck.add(prop23);
+	deck.add(prop24);
+	deck.add(prop25);
+	deck.add(prop26);
+	deck.add(prop27);
 	//MONEY =================================================================
 	Cards money0 = new Money(10, 11);
 	Cards money1 = new Money(1, 12);
