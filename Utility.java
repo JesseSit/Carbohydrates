@@ -1,8 +1,25 @@
 public class Utility extends Property {
     
-    public Utility(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
-	name = Name;
+    public Utility(){
+        value = 2;
+	ID = 8;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 0;
+	rentVal[3] = 0;
+	setNum = 2;
 	color = "Utility";
     }
+    public Utility(String Name){
+	name = Name;
+        value = 2;
+	ID = 8;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 0;
+	rentVal[3] = 0;
+	setNum = 2;
+	color = "Utility";
+    }
+    
 }

@@ -1,8 +1,26 @@
 public class DarkBlue extends Property {
     
-    public DarkBlue(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
-	name = Name;
+    public DarkBlue(){
+	value = 4;
+	ID = 1;
+	rentVal[0] = 3;
+	rentVal[1] = 8;
+	rentVal[2] = 0;
+	rentVal[3] = 0;
+	setNum = 2;
 	color = "DarkBlue";
+	    
+    }
+    public DarkBlue(String Name){
+	name = Name;
+	value = 4;
+	ID = 1;
+	rentVal[0] = 3;
+	rentVal[1] = 8;
+	rentVal[2] = 0;
+	rentVal[3] = 0;
+	setNum = 2;
+	color = "DarkBlue";
+	    
     }
 }

@@ -43,6 +43,14 @@ public class Player {
 	    }
 	}
     }
+    public void addProperty(Cards card) {
+	for (int x = 0; x < 10; x++) {
+	    if (property.get(x).getColor() == ((Property)(card)).getColor()) {
+		property.get(x).addOne();
+		return;
+	    }
+	}
+    }
     public void addBank(int index) {
 	bank.add(hand.remove(index));
     }

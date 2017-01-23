@@ -1,8 +1,24 @@
 public class Brown extends Property {
     
-    public Brown(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2,int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
+    public Brown(){
+	value = 1;
+	ID = 0;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 0;
+	rentVal[3] = 0;
+	setNum = 2;
+	color = "Brown";
+    }
+    public Brown(String Name){
 	name = Name;
+	value = 1;
+	ID = 0;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 0;
+	rentVal[3] = 0;
+	setNum = 2;
 	color = "Brown";
     }
 }

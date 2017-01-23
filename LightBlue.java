@@ -1,8 +1,24 @@
 public class LightBlue extends Property {
     
-    public LightBlue(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
+    public LightBlue(){
+	value = 1;
+	ID = 3;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 3;
+	rentVal[3] = 0;
+	setNum = 3;
+	color = "LightBlue";
+    }
+    public LightBlue(String Name){
 	name = Name;
+	value = 1;
+	ID = 3;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 3;
+	rentVal[3] = 0;
+	setNum = 3;
 	color = "LightBlue";
     }
 }

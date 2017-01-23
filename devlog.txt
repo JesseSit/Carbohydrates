@@ -166,3 +166,8 @@ Jesse :: was sick, did not work on project
 Xing Tao :: created a shuffle deck function and used joshel's text file to create part of the deck. Also worked on being able to play other types of cards and worked on toString methods.
 Jesse :: added property cards to cards text file. added getField() method to display all player’s banks and properties at start of each turn.
 ==============================================================
+
+2017-01-22
+--------------------------------------------------------------
+Jesse :: changed constructors for property. dealt will wild property cards in woo.java. added rent cards to deck.
+==============================================================

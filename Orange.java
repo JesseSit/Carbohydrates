@@ -1,8 +1,24 @@
 public class Orange extends Property {
     
-    public Orange(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
+    public Orange(){
+	value = 2;
+	ID = 4;
+	rentVal[0] = 1;
+	rentVal[1] = 3;
+	rentVal[2] = 5;
+	rentVal[3] = 0;
+	setNum = 3;
+	color = "Orange";
+    }
+    public Orange(String Name){
 	name = Name;
+	value = 2;
+	ID = 4;
+	rentVal[0] = 1;
+	rentVal[1] = 3;
+	rentVal[2] = 5;
+	rentVal[3] = 0;
+	setNum = 3;
 	color = "Orange";
     }
 

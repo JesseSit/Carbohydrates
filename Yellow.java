@@ -1,8 +1,24 @@
 public class Yellow extends Property {
     
-    public Yellow(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
+    public Yellow(){
+        value = 3;
+	ID = 9;
+	rentVal[0] = 2;
+	rentVal[1] = 4;
+	rentVal[2] = 6;
+	rentVal[3] = 0;
+	setNum = 3;
+	color = "Yellow";
+    }
+    public Yellow(String Name){
 	name = Name;
+        value = 3;
+	ID = 9;
+	rentVal[0] = 2;
+	rentVal[1] = 4;
+	rentVal[2] = 6;
+	rentVal[3] = 0;
+	setNum = 3;
 	color = "Yellow";
     }
 }

@@ -51,6 +51,9 @@ public class Woo{
 
 //PLAY GAME ====================================================================
 	int index;
+	String rentColor;
+	String wildColor;
+	Cards prop99 = new Brown();
 	while (cardNum < 3){
 	    //PLAYER 1 =========================================================
 	    System.out.println("======================== Turn " + turns + "==============================================");
@@ -77,9 +80,46 @@ public class Woo{
 		}
 		else {
 		    //PROPRETY CARDS============================================
-		    if (((Cards)(h0.hand.get(index))).getID() < 11){
+		    if (((Cards)(h0.hand.get(index))).getID() < 10){
 		        h0.addProperty(index);
 		    }
+		    if (((Cards)(h0.hand.get(index))).getID() == 10){
+			System.out.println("Pick color of wildcard:");
+			wildColor = Keyboard.readString();
+			if (wildColor.equals("Brown")){
+			    prop99 = new Brown();
+			}
+			if (wildColor.equals("DarkBlue")){
+			    prop99 = new DarkBlue();
+			}
+			if (wildColor.equals("Green")){
+			    prop99 = new Green();
+			}
+			if (wildColor.equals("LightBlue")){
+			    prop99 = new LightBlue();
+			}
+			if (wildColor.equals("Orange")){
+			    prop99 = new Orange();
+			}
+			if (wildColor.equals("Purple")){
+			    prop99 = new Purple();
+			}
+			if (wildColor.equals("Railroad")){
+			    prop99 = new Railroad();
+			}
+			if (wildColor.equals("Red")){
+			    prop99 = new Red();
+			}
+			if (wildColor.equals("Utility")){
+			    prop99 = new Utility();
+			}
+			if (wildColor.equals("Yellow")){
+			    prop99 = new Yellow();
+			}
+			h0.addProperty(prop99);
+		        ((Human)h0).discard(index);
+		    }
+			
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 11 && ((Cards)(h0.hand.get(index))).getID() <= 16) {
 			h0.addBank(index);
@@ -88,7 +128,10 @@ public class Woo{
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
 			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("collect")){
-			    System.out.println("Pick property color:");
+			    //System.out.println("Pick property color:");
+			    //rentColor = Keyboard.readString();
+			    // System.out.println("Enter which player you want to collet from (e.g. h0 for the first player):");
+			    
 			    h0.playRent(index);
 			}
 			else {
@@ -145,6 +188,42 @@ public class Woo{
 		    //PROPRETY CARDS============================================
 		    if (((Cards)(h1.hand.get(index))).getID() < 11){
 			h1.addProperty(index);
+		    }
+		    if (((Cards)(h1.hand.get(index))).getID() == 10){
+			System.out.println("Pick color of wildcard:");
+			wildColor = Keyboard.readString();
+			if (wildColor.equals("Brown")){
+			    prop99 = new Brown();
+			}
+			if (wildColor.equals("DarkBlue")){
+			    prop99 = new DarkBlue();
+			}
+			if (wildColor.equals("Green")){
+			    prop99 = new Green();
+			}
+			if (wildColor.equals("LightBlue")){
+			    prop99 = new LightBlue();
+			}
+			if (wildColor.equals("Orange")){
+			    prop99 = new Orange();
+			}
+			if (wildColor.equals("Purple")){
+			    prop99 = new Purple();
+			}
+			if (wildColor.equals("Railroad")){
+			    prop99 = new Railroad();
+			}
+			if (wildColor.equals("Red")){
+			    prop99 = new Red();
+			}
+			if (wildColor.equals("Utility")){
+			    prop99 = new Utility();
+			}
+			if (wildColor.equals("Yellow")){
+			    prop99 = new Yellow();
+			}
+			h1.addProperty(prop99);
+		        ((Human)h1).discard(index);
 		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h1.hand.get(index))).getID() >= 11 && ((Cards)(h1.hand.get(index))).getID() <= 16) {
@@ -203,6 +282,42 @@ public class Woo{
 		    if (((Cards)(h2.hand.get(index))).getID() < 11){
 			h2.addProperty(index);
 		    }
+		    if (((Cards)(h2.hand.get(index))).getID() == 10){
+			System.out.println("Pick color of wildcard:");
+			wildColor = Keyboard.readString();
+			if (wildColor.equals("Brown")){
+			    prop99 = new Brown();
+			}
+			if (wildColor.equals("DarkBlue")){
+			    prop99 = new DarkBlue();
+			}
+			if (wildColor.equals("Green")){
+			    prop99 = new Green();
+			}
+			if (wildColor.equals("LightBlue")){
+			    prop99 = new LightBlue();
+			}
+			if (wildColor.equals("Orange")){
+			    prop99 = new Orange();
+			}
+			if (wildColor.equals("Purple")){
+			    prop99 = new Purple();
+			}
+			if (wildColor.equals("Railroad")){
+			    prop99 = new Railroad();
+			}
+			if (wildColor.equals("Red")){
+			    prop99 = new Red();
+			}
+			if (wildColor.equals("Utility")){
+			    prop99 = new Utility();
+			}
+			if (wildColor.equals("Yellow")){
+			    prop99 = new Yellow();
+			}
+			h2.addProperty(prop99);
+		        ((Human)h2).discard(index);
+		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h2.hand.get(index))).getID() >= 11 && ((Cards)(h2.hand.get(index))).getID() <= 16) {
 			h2.addBank(index);
@@ -259,6 +374,42 @@ public class Woo{
 		    if (((Cards)(h3.hand.get(index))).getID() < 11){
 			h3.addProperty(index);
 		    }
+		    if (((Cards)(h3.hand.get(index))).getID() == 10){
+			System.out.println("Pick color of wildcard:");
+			wildColor = Keyboard.readString();
+			if (wildColor.equals("Brown")){
+			    prop99 = new Brown();
+			}
+			if (wildColor.equals("DarkBlue")){
+			    prop99 = new DarkBlue();
+			}
+			if (wildColor.equals("Green")){
+			    prop99 = new Green();
+			}
+			if (wildColor.equals("LightBlue")){
+			    prop99 = new LightBlue();
+			}
+			if (wildColor.equals("Orange")){
+			    prop99 = new Orange();
+			}
+			if (wildColor.equals("Purple")){
+			    prop99 = new Purple();
+			}
+			if (wildColor.equals("Railroad")){
+			    prop99 = new Railroad();
+			}
+			if (wildColor.equals("Red")){
+			    prop99 = new Red();
+			}
+			if (wildColor.equals("Utility")){
+			    prop99 = new Utility();
+			}
+			if (wildColor.equals("Yellow")){
+			    prop99 = new Yellow();
+			}
+			h3.addProperty(prop99);
+		        ((Human)h3).discard(index);
+		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h3.hand.get(index))).getID() >= 11 && ((Cards)(h3.hand.get(index))).getID() <= 16) {
 			h3.addBank(index);
@@ -298,43 +449,43 @@ public class Woo{
 
     public static void createDeck(ArrayList <Cards> deck) {
 	//PROPERTY ==============================================================
-	Cards prop0 = new Brown ("Baltic Avenue", 1, 0, 1, 2, 0, 0, 2);
-	Cards prop1 = new Brown ("Mediterranean Avenue", 1, 0, 1, 2, 0, 0, 2);
+	Cards prop0 = new Brown ("Baltic Avenue");
+	Cards prop1 = new Brown ("Mediterranean Avenue");
 
-	Cards prop2 = new DarkBlue("Boardwalk", 4, 1, 3, 8, 0, 0, 2);
-	Cards prop3 = new DarkBlue("Park Place", 4, 1, 3, 8, 0, 0, 2);
+	Cards prop2 = new DarkBlue("Boardwalk");
+	Cards prop3 = new DarkBlue("Park Place");
 
-	Cards prop4 = new Green("North Carolina Avenue", 4, 2, 2, 4, 7, 0, 3);
-	Cards prop5 = new Green("Pacific Avenue", 4, 2, 2, 4, 7, 0, 3);
-	Cards prop6 = new Green("Pennsylvania Avenue", 4, 2, 2, 4, 7, 0, 3);
+	Cards prop4 = new Green("North Carolina Avenue");
+	Cards prop5 = new Green("Pacific Avenue");
+	Cards prop6 = new Green("Pennsylvania Avenue");
 
-	Cards prop7 = new LightBlue("Connecticut Avenue", 1, 3, 1, 2, 3, 0, 3);
-	Cards prop8 = new LightBlue("Oriental Avenue", 1, 3, 1, 2, 3, 0, 3);
-	Cards prop9 = new LightBlue("Vermont Avenue", 1, 3, 1, 2, 3, 0, 3);
+	Cards prop7 = new LightBlue("Connecticut Avenue");
+	Cards prop8 = new LightBlue("Oriental Avenue");
+	Cards prop9 = new LightBlue("Vermont Avenue");
 
-	Cards prop10 = new Orange("New York Avenue", 2, 4, 1, 3, 5, 0, 3);
-	Cards prop11 = new Orange("St. James Place", 2, 4, 1, 3, 5, 0, 3);
-	Cards prop12 = new Orange("Tennessee Avenue", 2, 4, 1, 3, 5, 0, 3);
+	Cards prop10 = new Orange("New York Avenue");
+	Cards prop11 = new Orange("St. James Place");
+	Cards prop12 = new Orange("Tennessee Avenue");
 
-	Cards prop13 = new Purple("St. Charles Place", 2, 5, 1, 2, 4, 0, 3);
-	Cards prop14 = new Purple("Virginia Avenue", 2, 5, 1, 2, 4, 0, 3);
-	Cards prop15 = new Purple("States Avenue", 2, 5, 1, 2, 4, 0, 3);
+	Cards prop13 = new Purple("St. Charles Place");
+	Cards prop14 = new Purple("Virginia Avenue");
+	Cards prop15 = new Purple("States Avenue");
 
-	Cards prop16 = new Railroad("Short Line", 2, 6, 1, 2, 3, 4, 4);
-	Cards prop17 = new Railroad("B. & O. Railroad", 2, 6, 1, 2, 3, 4, 4);
-	Cards prop18 = new Railroad("Reading Railroad", 2, 6, 1, 2, 3, 4, 4);
-	Cards prop19 = new Railroad("Pennsylvania Railroad", 2, 6, 1, 2, 3, 4, 4);
+	Cards prop16 = new Railroad("Short Line");
+	Cards prop17 = new Railroad("B. & O. Railroad");
+	Cards prop18 = new Railroad("Reading Railroad");
+	Cards prop19 = new Railroad("Pennsylvania Railroad");
 
-	Cards prop20 = new Red("Kentucky Avenue", 3, 7, 2, 3, 6, 0, 3);
-	Cards prop21 = new Red("Indiana Avenue", 3, 7, 2, 3, 6, 0, 3);
-	Cards prop22 = new Red("Illinois Avenue", 3, 7, 2, 3, 6, 0, 3);
+	Cards prop20 = new Red("Kentucky Avenue");
+	Cards prop21 = new Red("Indiana Avenue");
+	Cards prop22 = new Red("Illinois Avenue");
 
-	Cards prop23 = new Utility("Water Works", 2, 8, 1, 2, 0, 0, 2);
-	Cards prop24 = new Utility("Electric Company", 2, 8, 1, 2, 0, 0, 2);
+	Cards prop23 = new Utility("Water Works");
+	Cards prop24 = new Utility("Electric Company");
 
-	Cards prop25 = new Yellow("Ventnor Avenue", 3, 9, 2, 4, 6, 0, 3);
-	Cards prop26 = new Yellow("Marvin Gardens", 3, 9, 2, 4, 6, 0, 3);
-	Cards prop27 = new Yellow("Atlantic Avenue", 3, 9, 2, 4, 6, 0, 3);
+	Cards prop25 = new Yellow("Ventnor Avenue");
+	Cards prop26 = new Yellow("Marvin Gardens");
+	Cards prop27 = new Yellow("Atlantic Avenue");
 
 	deck.add(prop0);
 	deck.add(prop1);
@@ -434,6 +585,30 @@ public class Woo{
 	}
 	
 	//RENT==================================================================
+	Cards rent0 = new Rent(3, 17, "N/A", "N/A", true);
+	Cards rent1 = new Rent(1, 18, "Green", "DarkBlue", false);
+	Cards rent2 = new Rent(1, 19, "Brown", "LightBlue", false);
+	Cards rent3 = new Rent(1, 20, "Purple", "Orange", false);
+	Cards rent4 = new Rent(1, 21, "Black", "White", false);
+	Cards rent5 = new Rent(1, 22, "Red", "Yellow", false);
+	for (int x = 0; x < 3; x++){
+	    deck.add(rent0);
+	}
+	for (int x = 0; x < 2; x++){
+	    deck.add(rent1);
+	}
+	for (int x = 0; x < 2; x++){
+	    deck.add(rent2);
+	}
+	for (int x = 0; x < 2; x++){
+	    deck.add(rent3);
+	}
+	for (int x = 0; x < 2; x++){
+	    deck.add(rent4);
+	}
+	for (int x = 0; x < 2; x++){
+	    deck.add(rent5);
+	}
     }
 
     private static void swap( int i, int j, ArrayList <Cards> Deck) {

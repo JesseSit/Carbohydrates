@@ -1,8 +1,22 @@
 public class Railroad extends Property {
     
-    public Railroad(String Name, int Val, int id, int rentVal0, int rentVal1, int rentVal2, int rentVal3, int SetNum){
-	super(Val, id, rentVal0, rentVal1, rentVal2, rentVal3, SetNum);
+    public Railroad(){
+	value = 2;
+	ID = 6;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 3;
+	rentVal[3] = 4;
+	color = "Railroad";
+    }
+    public Railroad(String Name){
 	name = Name;
+	value = 2;
+	ID = 6;
+	rentVal[0] = 1;
+	rentVal[1] = 2;
+	rentVal[2] = 3;
+	rentVal[3] = 4;
 	color = "Railroad";
     }
 }
