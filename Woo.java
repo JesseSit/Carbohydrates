@@ -75,15 +75,15 @@ public class Woo{
 		    cardNum = 3;
 		}
 		else {
-		    //PROPRETY CARDS===================================
+		    //PROPRETY CARDS============================================
 		    if (((Cards)(h0.hand.get(index))).getID() < 11){
 			h0.addProperty(index);
 		    }
-		    //MONEY CARDS=====================================
+		    //MONEY CARDS===============================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 11 && ((Cards)(h0.hand.get(index))).getID() <= 16) {
 			h0.addBank(index);
 		    }
-		    //RENT CARDS =====================================
+		    //RENT CARDS ===============================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 17 && ((Cards)(h0.hand.get(index))).getID() <= 22) {
 			System.out.println("If you want to collect rent, type 'collect'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("collect")){
@@ -94,7 +94,7 @@ public class Woo{
 			    h0.addBank(index);
 			}
 		    }
-		    //ACTION CARDS ===================================
+		    //ACTION CARDS =============================================
 		    else {
 			System.out.println("If you want to play action, type 'play'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("play")){
@@ -141,19 +141,19 @@ public class Woo{
 		    cardNum = 3;
 		}
 		else {
-		    //PROPRETY CARDS===================================
+		    //PROPRETY CARDS============================================
 		    if (((Cards)(h1.hand.get(index))).getID() < 11){
 			h1.addProperty(index);
 		    }
-		    //MONEY CARDS================================
+		    //MONEY CARDS===============================================
 		    else if (((Cards)(h1.hand.get(index))).getID() >= 11 && ((Cards)(h1.hand.get(index))).getID() <= 16) {
 			h1.addBank(index);
 		    }
-		    //RENT CARDS =====================================
+		    //RENT CARDS ===============================================
 		    else if (((Cards)(h1.hand.get(index))).getID() >= 17 && ((Cards)(h1.hand.get(index))).getID() <= 22) {
 			h1.playRent(index);
 		    }
-		    //ACTION CARDS ===================================
+		    //ACTION CARDS =============================================
 		    else {
 			System.out.println("If you want to play action, type 'play'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("play")){
@@ -198,19 +198,19 @@ public class Woo{
 		    cardNum = 3;
 		}
 		else {
-		    //PROPRETY CARDS===================================
+		    //PROPRETY CARDS============================================
 		    if (((Cards)(h2.hand.get(index))).getID() < 11){
 			h2.addProperty(index);
 		    }
-		    //MONEY CARDS================================
+		    //MONEY CARDS===============================================
 		    else if (((Cards)(h2.hand.get(index))).getID() >= 11 && ((Cards)(h2.hand.get(index))).getID() <= 16) {
 			h2.addBank(index);
 		    }
-		    //RENT CARDS =====================================
+		    //RENT CARDS ===============================================
 		    else if (((Cards)(h2.hand.get(index))).getID() >= 17 && ((Cards)(h2.hand.get(index))).getID() <= 22) {
 			h2.playRent(index);
 		    }
-		    //ACTION CARDS ===================================
+		    //ACTION CARDS =============================================
 		    else {
 			System.out.println("If you want to play action, type 'play'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("play")){
@@ -254,19 +254,19 @@ public class Woo{
 		    cardNum = 0;
 		}
 		else {
-		    //PROPRETY CARDS===================================
+		    //PROPRETY CARDS============================================
 		    if (((Cards)(h3.hand.get(index))).getID() < 11){
 			h3.addProperty(index);
 		    }
-		    //MONEY CARDS================================
+		    //MONEY CARDS===============================================
 		    else if (((Cards)(h3.hand.get(index))).getID() >= 11 && ((Cards)(h3.hand.get(index))).getID() <= 16) {
 			h3.addBank(index);
 		    }
-		    //RENT CARDS =====================================
+		    //RENT CARDS ===============================================
 		    else if (((Cards)(h3.hand.get(index))).getID() >= 17 && ((Cards)(h3.hand.get(index))).getID() <= 22) {
 			h3.playRent(index);
 		    }
-		    //ACTION CARDS ===================================
+		    //ACTION CARDS =============================================
 		    else {
 			System.out.println("If you want to play action, type 'play'. If you want to add to bank, type 'bank'.");
 			if(Keyboard.readString().equals("play")){
@@ -363,7 +363,8 @@ public class Woo{
 	deck.add(prop25);
 	deck.add(prop26);
 	deck.add(prop27);
-	//MONEY =================================================================
+
+	//MONEY ================================================================
 	Cards money0 = new Money(10, 11);
 	Cards money1 = new Money(1, 12);
 	Cards money2 = new Money(2, 13);
@@ -388,7 +389,8 @@ public class Woo{
 	for (int x = 0; x < 2; x++) {
 	    deck.add(money5);
 	}
-	//ACTION==================================================================
+	
+	//ACTION================================================================
 	Cards action0 = new Action(5, 23, "Deal Breaker", "Steal a complete set of properties from any player (Includes any buildings).");
 	Cards action1 = new Action(3, 24, "Debt Collector", "Force any player to pay you 5M.");
 	Cards action2 = new Action(1, 25, "Double The Rent!", "Needs to be played with a rend card.");
@@ -429,7 +431,9 @@ public class Woo{
 	for (int x = 0; x < 3; x++) {
 	    deck.add(action9);
 	}
-	//RENT=====================================================================================
+	
+	//RENT==================================================================
+
     }
 
     private static void swap( int i, int j, ArrayList <Cards> Deck) {
