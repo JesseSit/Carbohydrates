@@ -54,10 +54,10 @@ public class Woo{
 	String rentColor;
 	String wildColor;
 	Cards prop99 = new Brown();
-	while (cardNum < 3){
+	while (cardNum < 3){//check if you've played 3 cards already
 	    //PLAYER 1 =========================================================
 	    System.out.println("======================== Turn " + turns + "==============================================");
-	    if ((turns % amtPlayers) == 0){
+	    if ((turns % amtPlayers) == 0){// check whose turn it is
 		//prints everyone's boards
 		System.out.println(h0.getField());
 		if (amtPlayers > 1){
@@ -77,7 +77,7 @@ public class Woo{
 		System.out.println("Or: Enter 99 if you would like to end your turn.");
 		index = Keyboard.readInt();
 		if (index == 99) {//checks to see if you end turn
-		    cardNum = 3;
+		    cardNum = 3;//changes it to 3 which later on will end your turn
 		}
 		else {
 		    //PROPRETY CARDS============================================
@@ -170,18 +170,18 @@ public class Woo{
 		    }
 		    cardNum += 1;
 		}
-		if (cardNum == 3) {
-		    if (h0.hand.size() > 7) {
+		if (cardNum == 3) {//if you have already played 3 cards
+		    if (h0.hand.size() > 7) {//check if your hand is too full
 			System.out.println("You have too many cards in your hand. Please discard until you have 7 cards");
 			for (int x = 0; x < h0.hand.size() - 7; x++) {
 			    System.out.println(h0);
 			    System.out.println("Pick the index of the card that you wish to discard");
-			    index = Keyboard.readInt();
+			    index = Keyboard.readInt();//choose which card to discard
 			    ((Human)h0).discard(index);
 			} 
 		    }
-		    cardNum = 0;
-		    turns += 1;
+		    cardNum = 0;//reset 
+		    turns += 1;//move onto next player
 		}
 	    }
 	    //PLAYER 2 =========================================================
