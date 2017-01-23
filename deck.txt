@@ -5,45 +5,53 @@
 //Action ID = 23-32 (36 cards)
 
 //PROPERTY =====================================================================
-Cards prop = new Brown (“Baltic Avenue”, 1, 0, 1, 2, 0, 0, 2);
-Cards prop = new Brown (“Mediterranean Avenue”, 1, 0, 1, 2, 0, 0, 2);
+name,Val ,id ,rent0 ,rent1 ,rent2 ,rent3 ,setnum
+Cards prop1 = new Brown (“Baltic Avenue”, 1, 0, 1, 2, 0, 0, 2);
+Cards prop2 = new Brown (“Mediterranean Avenue”, 1, 0, 1, 2, 0, 0, 2);
 
-Cards prop = new DarkBlue(“Boardwalk”, 4, 1, 3, 8, 0, 0, 2);
-Cards prop = new DarkBlue(“Park Place”, 4, 1, 3, 8, 0, 0, 2);
+Cards prop3 = new DarkBlue(“Boardwalk”, 4, 1, 3, 8, 0, 0, 2);
+Cards prop4 = new DarkBlue(“Park Place”, 4, 1, 3, 8, 0, 0, 2);
 
-Cards prop = new Green(“North Carolina Avenue”, 4, 2, 2, 4, 7, 0, 3);
-Cards prop = new Green(“Pacific Avenue”, 4, 2, 2, 4, 7, 0, 3);
-Cards prop = new Green(“Pennsylvania Avenue”, 4, 2, 2, 4, 7, 0, 3);
+Cards prop5 = new Green(“North Carolina Avenue”, 4, 2, 2, 4, 7, 0, 3);
+Cards prop6 = new Green(“Pacific Avenue”, 4, 2, 2, 4, 7, 0, 3);
+Cards prop7 = new Green(“Pennsylvania Avenue”, 4, 2, 2, 4, 7, 0, 3);
 
-Cards prop = new LightBlue(“Connecticut Avenue”, 1, 3, 1, 2, 3, 0, 3);
-Cards prop = new LightBlue(“Oriental Avenue”, 1, 3, 1, 2, 3, 0, 3);
-Cards prop = new LightBlue(“Vermont Avenue”, 1, 3, 1, 2, 3, 0, 3);
+Cards prop8 = new LightBlue(“Connecticut Avenue”, 1, 3, 1, 2, 3, 0, 3);
+Cards prop9 = new LightBlue(“Oriental Avenue”, 1, 3, 1, 2, 3, 0, 3);
+Cards prop10 = new LightBlue(“Vermont Avenue”, 1, 3, 1, 2, 3, 0, 3);
 
-Cards prop = new Orange(“New York Avenue”, 2, 4, 1, 3, 5, 0, 3);
-Cards prop = new Orange(“St. James Place”, 2, 4, 1, 3, 5, 0, 3);
-Cards prop = new Orange(“Tennessee Avenue”, 2, 4, 1, 3, 5, 0, 3);
+Cards prop11 = new Orange(“New York Avenue”, 2, 4, 1, 3, 5, 0, 3);
+Cards prop12 = new Orange(“St. James Place”, 2, 4, 1, 3, 5, 0, 3);
+Cards prop13 = new Orange(“Tennessee Avenue”, 2, 4, 1, 3, 5, 0, 3);
 
-Cards prop = new Purple(“St. Charles Place”, 2, 5, 1, 2, 4, 0, 3);
-Cards prop = new Purple(“Virginia Avenue”, 2, 5, 1, 2, 4, 0, 3);
-Cards prop = new Purple(“States Avenue”, 2, 5, 1, 2, 4, 0, 3);
+Cards prop14 = new Purple(“St. Charles Place”, 2, 5, 1, 2, 4, 0, 3);
+Cards prop15 = new Purple(“Virginia Avenue”, 2, 5, 1, 2, 4, 0, 3);
+Cards prop16 = new Purple(“States Avenue”, 2, 5, 1, 2, 4, 0, 3);
 
-Cards prop = new Railroad(“Short Line”, 2, 6, 1, 2, 3, 4, 4);
-Cards prop = new Railroad(“B. & O. Railroad”, 2, 6, 1, 2, 3, 4, 4);
-Cards prop = new Railroad(“Reading Railroad”, 2, 6, 1, 2, 3, 4, 4);
-Cards prop = new Railroad(“Pennsylvania Railroad”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop17 = new Railroad(“Short Line”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop18 = new Railroad(“B. & O. Railroad”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop19 = new Railroad(“Reading Railroad”, 2, 6, 1, 2, 3, 4, 4);
+Cards prop20 = new Railroad(“Pennsylvania Railroad”, 2, 6, 1, 2, 3, 4, 4);
 
-Cards prop = new Red(“Kentucky Avenue”, 3, 7, 2, 3, 6, 0, 3);
-Cards prop = new Red(“Indiana Avenue”, 3, 7, 2, 3, 6, 0, 3);
-Cards prop = new Red(“Illinois Avenue”, 3, 7, 2, 3, 6, 0, 3);
+Cards prop21 = new Red(“Kentucky Avenue”, 3, 7, 2, 3, 6, 0, 3);
+Cards prop22 = new Red(“Indiana Avenue”, 3, 7, 2, 3, 6, 0, 3);
+Cards prop23 = new Red(“Illinois Avenue”, 3, 7, 2, 3, 6, 0, 3);
 
-Cards prop = new Utility(“Water Works”, 2, 8, 1, 2, 0, 0, 2);
-Cards prop = new Utility(“Electric Company”, 2, 8, 1, 2, 0, 0, 2);
+Cards prop24 = new Utility(“Water Works”, 2, 8, 1, 2, 0, 0, 2);
+Cards prop25 = new Utility(“Electric Company”, 2, 8, 1, 2, 0, 0, 2);
 
-Cards prop = new Yellow(“Ventnor Avenue”, 3, 9, 2, 4, 6, 0, 3);
-Cards prop = new Yellow(“Marvin Gardens”, 3, 9, 2, 4, 6, 0, 3);
-Cards prop = new Yellow(“Atlantic Avenue”, 3, 9, 2, 4, 6, 0, 3);
+Cards prop26 = new Yellow(“Ventnor Avenue”, 3, 9, 2, 4, 6, 0, 3);
+Cards prop27 = new Yellow(“Marvin Gardens”, 3, 9, 2, 4, 6, 0, 3);
+Cards prop28 = new Yellow(“Atlantic Avenue”, 3, 9, 2, 4, 6, 0, 3);
 
-Cards prop = new Wild(
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
+Cards prop = new Wild(, 10, , , , , , , , );
 
 //MONEY ========================================================================
 Cards money0 = new Money(10, 11);
@@ -73,24 +81,24 @@ Cards money18 = new Money(5, 16);
 Cards money19 = new Money(5, 16);
 
 //RENT =========================================================================
-Cards rent = new Rent(3, 17, NA, NA, true);
-Cards rent = new Rent(3, 17, NA, NA, true);
-Cards rent = new Rent(3, 17, NA, NA, true);
+Cards rent1 = new Rent(3, 17, NA, NA, true);
+Cards rent2 = new Rent(3, 17, NA, NA, true);
+Cards rent3 = new Rent(3, 17, NA, NA, true);
 
-Cards rent = new Rent(1, 18, "Green", "DarkBlue", false);
-Cards rent = new Rent(1, 18, "Green", "DarkBlue", false);
+Cards rent4 = new Rent(1, 18, "Green", "DarkBlue", false);
+Cards rent5 = new Rent(1, 18, "Green", "DarkBlue", false);
 
-Cards rent = new Rent(1, 19, "Brown", "LightBlue", false);
-Cards rent = new Rent(1, 19, "Brown", "LightBlue", false);
+Cards rent6 = new Rent(1, 19, "Brown", "LightBlue", false);
+Cards rent7 = new Rent(1, 19, "Brown", "LightBlue", false);
 
-Cards rent = new Rent(1, 20, "Purple", "Orange", false);
-Cards rent = new Rent(1, 20, "Purple", "Orange", false);
+Cards rent8 = new Rent(1, 20, "Purple", "Orange", false);
+Cards rent9 = new Rent(1, 20, "Purple", "Orange", false);
 
-Cards rent = new Rent(1, 21, "Black", "White", false);
-Cards rent = new Rent(1, 21, "Black", "White", false);
+Cards rent10 = new Rent(1, 21, "Black", "White", false);
+Cards rent11 = new Rent(1, 21, "Black", "White", false);
  
-Cards rent = new Rent(1, 22, "Red", "Yellow", false);
-Cards rent = new Rent(1, 22, "Red", "Yellow", false);
+Cards rent12 = new Rent(1, 22, "Red", "Yellow", false);
+Cards rent13 = new Rent(1, 22, "Red", "Yellow", false);
 
 //ACTION =======================================================================
 Cards action0 = new Action(5, 23, "Deal Breaker", "Steal a complete set of properties from any player (Includes any buildings).");
