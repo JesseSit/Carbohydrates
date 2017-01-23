@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Player {
-    protected ArrayList hand;
+    protected ArrayList <Cards> hand;
     protected ArrayList bank;
-    protected ArrayList property;
+    protected ArrayList <PropHelper>  property;
     protected String name;
 
     public String getField(){
@@ -14,9 +14,8 @@ public class Player {
 	    retStr += "$" + ((Cards)(bank.get(y))).getVal() + "\n";
 	}
 	retStr += "Property:" + "\n";
-	for (int z = 0; z < property.size(); z++){
-	    retStr += z + " : ";
-	    retStr += property.get(z) + "\n";
+	for (int z = 0; z < 10; z++){
+	    retStr += property.get(z);
 	}
 	return retStr;
     }
@@ -36,7 +35,13 @@ public class Player {
     }
 
     public void addProperty(int index) {
-	property.add(hand.remove(index));
+	for (int x = 0; x < 10; x++) {
+	    if (property.get(x).getColor() == ((Property)(hand.get(index))).getColor()) {
+		property.get(x).addOne();
+		hand.remove(index);
+		return;
+	    }
+	}
     }
     public void addBank(int index) {
 	bank.add(hand.remove(index));

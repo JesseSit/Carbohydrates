@@ -53,6 +53,7 @@ public class Woo{
 	int index;
 	while (cardNum < 3){
 	    //PLAYER 1 =========================================================
+	    System.out.println("======================== Turn " + turns + "==============================================");
 	    if ((turns % amtPlayers) == 0){
 		System.out.println(h0.getField());
 		if (amtPlayers > 1){
@@ -77,7 +78,7 @@ public class Woo{
 		else {
 		    //PROPRETY CARDS============================================
 		    if (((Cards)(h0.hand.get(index))).getID() < 11){
-			h0.addProperty(index);
+		        h0.addProperty(index);
 		    }
 		    //MONEY CARDS===============================================
 		    else if (((Cards)(h0.hand.get(index))).getID() >= 11 && ((Cards)(h0.hand.get(index))).getID() <= 16) {
@@ -433,7 +434,6 @@ public class Woo{
 	}
 	
 	//RENT==================================================================
-
     }
 
     private static void swap( int i, int j, ArrayList <Cards> Deck) {

@@ -2,6 +2,7 @@ public abstract class Property extends Cards {
     protected String name;
     protected int[] rentVal = new int[4];
     protected int setNum;
+    protected String color;
    
     public Property (){
 	name = "";
@@ -35,5 +36,9 @@ public abstract class Property extends Cards {
 	}
 	retStr += "full set:" + setNum;
 	return retStr;
+    }
+
+    public String getColor(){
+	return color;
     }
 }
